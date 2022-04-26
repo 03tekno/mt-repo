@@ -9,8 +9,8 @@ chown root debian-chroot
 debootstrap --arch=amd64 testing debian-chroot https://deb.debian.org/debian
 for i in dev dev/pts proc sys; do mount -o bind /$i debian-chroot/$i; done
 
-#Debian Unstable depo ekleyelim
-echo 'deb http://deb.debian.org/debian testing main contrib non-free' > debian-chroot/etc/apt/sources.list
+#Debian testing depo ekleyelim
+echo 'deb https://deb.debian.org/debian testing main contrib non-free' > debian-chroot/etc/apt/sources.list
 chroot debian-chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
@@ -34,7 +34,7 @@ chroot debian-chroot apt-get install xorg xinit -y
 
 chroot debian-chroot apt-get install network-manager-gnome xfce4 xfce4-terminal xfce4-appmenu-plugin xfce4-battery-plugin xfce4-whiskermenu-plugin xfce4-timer-plugin -y
 chroot debian-chroot apt-get install xfce4-taskmanager xfce4-power-manager mousepad parole -y
-chroot debian-chroot apt-get install blueman gvsf-backends locales synaptic gdebi firefox -y
+chroot debian-chroot apt-get install blueman gvsf-backends locales synaptic gdebi firefox-esr firefox-esr-l10n-tr libreoffice -y
 
 #Gereksiz paketleri silelim
 chroot debian-chroot apt-get remove xterm -y
@@ -78,4 +78,4 @@ echo '    initrd /live/initrd.img' >> isowork/boot/grub/grub.cfg
 echo '}' >> isowork/boot/grub/grub.cfg
 
 echo "----------------İso oluşturuluyor..-----------------"
-grub-mkrescue isowork -o debian-unstable-live-$(date +%x).iso
+grub-mkrescue isowork -o debian-testing-live-$(date +%x).iso
