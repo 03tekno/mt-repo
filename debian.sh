@@ -1,4 +1,5 @@
 #!/bin/bash
+# Kaynak:https://sulincix.github.io/sayfalar/html/debian-iso-yapimi.html
 
 #Gerekli paketlerin kurulması
 apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi devscripts -y
