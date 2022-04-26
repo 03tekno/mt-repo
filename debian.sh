@@ -1,5 +1,4 @@
 #!/bin/bash
-# Kaynak:https://sulincix.github.io/sayfalar/html/debian-iso-yapimi.html
 
 #Gerekli paketlerin kurulması
 apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi devscripts -y
@@ -21,7 +20,7 @@ chroot debian-chroot apt-get install live-config live-boot -y
 chroot debian-chroot apt-get install xorg xinit -y
 
 #Firmware paketlerini kuralım (Kurulmasını istemediğiniz firmware paketini silebilirsiniz.)
-chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmware-nonfree \
+#chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmware-nonfree \
   firmware-amd-graphics firmware-ath9k-htc firmware-atheros \
   firmware-b43-installer firmware-b43legacy-installer firmware-bnx2 \
   firmware-bnx2x firmware-brcm80211 firmware-cavium \
@@ -33,10 +32,9 @@ chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmwar
   firmware-realtek firmware-samsung firmware-siano \
   firmware-sof-signed firmware-ti-connectivity firmware-zd1211 hdmi2usb-fx2-firmware -y
 
-chroot debian-chroot apt-get install xfce4 xfce4-terminal xfce4-appmenu-plugin xfce4-battery-plugin xfce4-whiskermenu-plugin xfce4-timer-plugin -y
+chroot debian-chroot apt-get install network-manager-gnome xfce4 xfce4-terminal xfce4-appmenu-plugin xfce4-battery-plugin xfce4-whiskermenu-plugin xfce4-timer-plugin -y
 chroot debian-chroot apt-get install xfce4-taskmanager xfce4-power-manager mousepad parole -y
-chroot debian-chroot apt-get install network-manager-gnome blueman gvsf-backends locales -y
-chroot debian-chroot apt-get install synaptic gdebi firefox -y
+chroot debian-chroot apt-get install blueman gvsf-backends locales synaptic gdebi firefox -y
 
 #Gereksiz paketleri silelim
 chroot debian-chroot apt-get remove xterm -y
