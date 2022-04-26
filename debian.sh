@@ -20,7 +20,7 @@ chroot debian-chroot apt-get install live-config live-boot -y
 chroot debian-chroot apt-get install xorg xinit -y
 
 #Firmware paketlerini kuralım (Kurulmasını istemediğiniz firmware paketini silebilirsiniz.)
-#chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmware-nonfree \
+chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmware-nonfree \
   firmware-amd-graphics firmware-ath9k-htc firmware-atheros \
   firmware-b43-installer firmware-b43legacy-installer firmware-bnx2 \
   firmware-bnx2x firmware-brcm80211 firmware-cavium \
