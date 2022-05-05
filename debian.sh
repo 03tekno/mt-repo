@@ -6,11 +6,11 @@ apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi d
 #debian-chroot dosyası oluşturalım
 mkdir debian-chroot
 chown root debian-chroot
-debootstrap --arch=amd64 testing debian-chroot https://deb.debian.org/debian
+debootstrap --arch=amd64 sid debian-chroot https://deb.debian.org/debian
 for i in dev dev/pts proc sys; do mount -o bind /$i debian-chroot/$i; done
 
 #Debian testing depo ekleyelim
-echo 'deb https://deb.debian.org/debian testing main contrib non-free' > debian-chroot/etc/apt/sources.list
+echo 'deb https://deb.debian.org/debian sid main contrib non-free' > debian-chroot/etc/apt/sources.list
 chroot debian-chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
@@ -20,7 +20,7 @@ chroot debian-chroot apt-get install live-config live-boot -y
 chroot debian-chroot apt-get install xorg xinit -y
 
 #Firmware paketlerini kuralım (Kurulmasını istemediğiniz firmware paketini silebilirsiniz.)
-#chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmware-nonfree \
+chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmware-nonfree \
   firmware-amd-graphics firmware-ath9k-htc firmware-atheros \
   firmware-b43-installer firmware-b43legacy-installer firmware-bnx2 \
   firmware-bnx2x firmware-brcm80211 firmware-cavium \
