@@ -34,7 +34,7 @@ chroot debian-chroot apt-get install atmel-firmware bluez-firmware dahdi-firmwar
 
 chroot debian-chroot apt-get install network-manager-gnome xfce4 xfce4-terminal xfce4-appmenu-plugin xfce4-battery-plugin xfce4-whiskermenu-plugin xfce4-timer-plugin -y
 chroot debian-chroot apt-get install xfce4-taskmanager xfce4-power-manager mousepad parole -y
-chroot debian-chroot apt-get install blueman gvfs-backends synaptic gdebi firefox-esr firefox-esr-l10n-tr -y
+chroot debian-chroot apt-get install blueman gvfs-backends synaptic gdebi firefox firefox-l10n-tr -y
 
 #Gereksiz paketleri silelim
 chroot debian-chroot apt-get remove xterm -y
