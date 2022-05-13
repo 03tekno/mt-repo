@@ -10,7 +10,7 @@ debootstrap --arch=amd64 ceres chroot https://pkgmaster.devuan.org/devuan
 for i in dev dev/pts proc sys; do mount -o bind /$i debian-chroot/$i; done
 
 #Devuan testing depo ekleyelim
-echo 'deb https://deb.debian.org/devuan ceres main contrib non-free' > debian-chroot/etc/apt/sources.list
+echo 'deb https://deb.devuan.org/devuan ceres main contrib non-free' > debian-chroot/etc/apt/sources.list
 chroot chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
