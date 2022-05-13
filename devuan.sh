@@ -6,11 +6,11 @@ apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi d
 #chroot dosyası oluşturalım
 mkdir chroot
 chown root chroot
-debootstrap --arch=amd64 ceres chroot https://deb.devuan.org/devuan
+debootstrap --arch=amd64 testing chroot https://deb.devuan.org/merged
 for i in dev dev/pts proc sys; do mount -o bind /$i debian-chroot/$i; done
 
 #Devuan testing depo ekleyelim
-echo 'deb https://deb.devuan.org/devuan ceres main contrib non-free' > debian-chroot/etc/apt/sources.list
+echo 'deb https://deb.devuan.org/merged testing main contrib non-free' > debian-chroot/etc/apt/sources.list
 chroot chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
