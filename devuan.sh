@@ -6,7 +6,7 @@ apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi d
 #chroot dosyası oluşturalım
 mkdir chroot
 chown root chroot
-debootstrap --arch=amd64 ceres chroot https://pkgmaster.devuan.org/devuan
+debootstrap --arch=amd64 ceres chroot https://deb.devuan.org/devuan
 for i in dev dev/pts proc sys; do mount -o bind /$i debian-chroot/$i; done
 
 #Devuan testing depo ekleyelim
