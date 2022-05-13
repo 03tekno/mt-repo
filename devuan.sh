@@ -65,4 +65,4 @@ echo '    initrd /live/initrd.img' >> isowork/boot/grub/grub.cfg
 echo '}' >> isowork/boot/grub/grub.cfg
 
 echo "----------------İso oluşturuluyor..-----------------"
-grub-mkrescue isowork -o debian-live-$(date +%x).iso
+grub-mkrescue isowork -o devuan-live-$(date +%x).iso
