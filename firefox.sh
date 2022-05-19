@@ -33,7 +33,7 @@ OnlyShowIn=Unity;
 
 [Desktop Action NewPrivateWindow]
 Name=Open a New Private Window
-Name[tr]=Yeni bir pencere aç
+Name[tr]=Yeni gizli pencere aç
 Exec=$HOME/.local/firefox/firefox -private-window
 OnlyShowIn=Unity;
 EOF
