@@ -4,7 +4,7 @@
 
 wget -O /tmp/firefox.tar.bz2 "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=tr"
 mkdir ~/.local/share/applications
-cat >> $HOME/.local/share/applications/Firefox-portable.desktop << EOF
+cat >> $HOME/.local/share/applications/Firefox.desktop << EOF
 [Desktop Entry]
 Version=1.0
 Name=Firefox
@@ -38,3 +38,4 @@ Exec=$HOME/.local/firefox/firefox -private-window
 OnlyShowIn=Unity;
 EOF
 tar -xvf /tmp/firefox.tar.bz2 -C ~/.local
+
