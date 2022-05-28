@@ -34,6 +34,7 @@ chroot debian-chroot apt-get install -y atmel-firmware bluez-firmware dahdi-firm
 
 chroot debian-chroot apt-get install xfce4 xfce4-goodies parole network-manager-gnome -y
 chroot debian-chroot apt-get install blueman gvfs-backends synaptic gdebi firefox firefox-l10n-tr -y
+chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan -y
 
 #Gereksiz paketleri silelim
 chroot debian-chroot apt-get remove xterm -y
