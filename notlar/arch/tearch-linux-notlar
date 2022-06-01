@@ -1,0 +1,24 @@
+TeArch Linux kurulum sonrası yapılacaklar:
+
+pacman -Syu
+pacman -S gnome-calculator vlc libreoffice audacious ...
+
+Pamac kurulumu
+Pamac, paket arama, önceden yüklenmiş olan paketleri görüntüleme ile isme veya kategoriye göre paket arayıp kurmamıza olanak tanır.
+sudo yok! su komutu ile root olup aşağıdaki komutu girelim.
+pacman -S pamac 
+
+Aur etkinleştirmek için:
+Pamac uygulamasını açalım tercihler kısmında üçüncü parti kısmına gidip Aur desteği etkin yapalım.
+
+LSL (Debian Subsystem) kullanımı
+Debian uygulamasına tıkla kendi kurulumunu yapacaktır.
+root olup apt update yap!
+apt komutları ile debian deposunda bulunan paketleri kur. 
+
+Hatalar ve Çözümleri:
+pacman -Syu komutu error: failed to synchronize all databases (veritabanı kilitlenemiyor) hatası veriyorsa
+aşağıdaki komutla db.lck silip tekrar pacman -Syu komutu girmemiz gerekiyor. (Not: root ile yapılacak)
+rm /var/lib/pacman/db.lck
+
+

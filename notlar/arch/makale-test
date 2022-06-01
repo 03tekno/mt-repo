@@ -1,0 +1,51 @@
+TeArch Linux inceleme
+
+TeAch Linux; Arch Linux altyapısını kullanarak oluşturulan açık kaynak kodlu ve son kullanıcının ihtiyaçlar için tasarlanmış harika bir işletim sistemidir. 
+TeArch Linux kullanıcıya çok kolay kurulum ve kullanım konforu sağlamaktadır. 
+Türkiye menşeili bir dağıtımdır. 
+Ücretsizdir, sistem tamamen gönüllülük esasına dayalı, kullanıcıdan her hangi bir bağış vs. talep etmeksizin geliştirilmektedir. 
+Geliştiriceleri Ali Rıza Keskin ve Muhammed Efe XXXX dir. 
+TeArch-linux isoları düzenli olarak yılda 2 defa yayınlanmakta olup, iso lar yine Teaiso adı verilen ve yine aynı ekip tarafından geliştirilen yazılım ile oluşturulmuştur. 
+Teaiso, python3 ve C ile yazılmış araçlar oluşturan çok amaçlı bir iso'dur.
+TeArch geliştirici ekibi sistemi hantallıktan arındırma, kararlılık ve hızlı bir sistem var edebilmek için bazı paketleri yeniden derlenmiştir.
+Resmi internet sitesi https://tearch-linux.gitlab.io/web/ adresinde hali hazırda beş adet masaüstü ortamına ait ISO lar mevcuttur. Bunlar: 
+1- Pantheon 
+2- Xfce 
+3- Gnome 
+4- Cinnamon
+5- Mate dir.
+
+Günümüzde Arch tabanlı yüzlerce dağıtım mevcuttur. Tema, simge ve duvarkağıdı değiştirilerek piyasaya sunulan iso lar ile ortalık maalesef ISO çöplüğüne dönüşmüş durumdadır. 
+Peki TeAcrh Linux de durum aynı mıdır? Tabiki hayır. TeArch Linux Tema, simge ve duvarkağıdı değiştirilerek piyasaya sunulan dağımlardan farlıdır. 
+TeArch Linux u farklı kılan Arch tabanlı sistemde tamamen TeArch geliştiricileri tarafından geliştirilen LSL (Debian Subsytem) isimli uygulama ile Debian işletim sisteminin sistem içinde barındırılması ve yine Debian paketlerinin kusursuzca kullanılabilir hale getirilmesidir. 
+Yine neredeyse bütün Arch tabanlı dağıtımlarda Calamares canlı kurucu ile karşılaşırız. TeArch Linux de canlı kurulum aracı ekip tarafından geliştirilen 17g Canlı Kurulum aracıdır. 
+17g; TeArch ekibi tarafından geliştirilen farklı dillerde kurulum sağlayan, kullanımı çok kolay ve otomatik kurulum yapan gayet başarılı bir araçtır.
+17g GTK tabanlı masaüstü ortamları için işini kusursuzca yapmakta olup, Qt bağımlılıkları yoktur. 
+Tearch da ayrıca laptoplar için otomatik güç tasarruf modu da mevcuttur. 
+
+TeAcrh Linux un en popüler masaüstü ortamı Pantheon olup bu makalemde sizlere TeArch Pantheon u inceleyip gerekli değerlendirmeleri yapacağım. 
+
+Pantheon nedir? Pantheon masaüstü ortamı, Linux Elementary OS dağıtım projesinin bir parçasıdır. 
+Ubuntu'nun LTS sürümlerinin bir türevi olan Pantheon, Elementary OS'yi geliştiren aynı ekip tarafından geliştirilmiştir. 
+Vala ve GTK3 Toolkit ile sıfırdan yazılmıştır ve son derece parlak görünümü ile tanınmaktadır.
+
+TeArch Pantheon masaüstü ortamı ile birlikte kurulu gelen paketler:
+Debian Subsystem, internet tarayıcı: Firefox, Metin düzenleyici: Gedit Dosya yöneticisi: Nemo, Disk işlemleri için: Gparted, Plank, Ses denetleyici: Pulse Audio Medya oynatıcı: Gnome Videolar, Resim görüntüleyici: Gnome Resim Gösterici, Tema: Flat Remix, Icon TeArch Pantheon ve Gnome Terminal paketleridir.
+
+ 
+
+Arch tabanlı dağıtımlarda son kullanıcılar için önem arz eden pamac paketide depoda mevcut olup kurulumu çok basittir. Pamac kurulum sonrası Aur depoyu da aktif edebilirsiniz.
+TeArch da bir diğer dikkat çeken husus sudo nun olmayışıdır. Kullanıcı sudo komutu yerine su komutu ile root yetkisi alır. 
+
+Sonuç ve değerlendirme:
+Artıları:
+Hızlı
+TeArch Pantheon sade ve şık görünüme sahip 
+Kolay kurulum ve kullanıma sahip
+Debian paketlerin kurulabilmesi (Bu özellik başka hiçbir dağıtımda mevcut değil!)
+Sistem kaynak tüketimi gayet verimli
+
+Eksileri:
+Sistemde kurulu gelen hesap makinesi yok
+
+

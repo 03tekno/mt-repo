@@ -1,0 +1,236 @@
+pacman {-h --help}
+    pacman {-V --version}
+    pacman {-D --database} <seçenekler> <paket(ler)>
+    pacman {-F --files}    [seçenekler] [dosya(lar)]
+    pacman {-Q --query}    [seçenekler] [paket(ler)]
+    pacman {-R --remove}   [seçenekler] <paket(ler)>
+    pacman {-S --sync}     [seçenekler] [paket(ler)]
+    pacman {-T --deptest}  [seçenekler] [paket(ler)]
+    pacman {-U --upgrade}  [seçenekler] <dosya(lar)>
+
+pacman -V pacman version göster
+
+pacman -D
+kullanım:  pacman {-D --database} <seçenekler> <paket(ler)>
+seçenekler:
+  -b, --dbpath <yol>   farklı bir veritabanı yolu belirle
+  -q, --quiet          sorgulama ve arama sırasında daha az bilgi göster
+  -r, --root <yol>     farklı bir kurulum kök dizini ayarla
+  -v, --verbose        ayrıntı göster
+      --arch <arch>    alternatif bir mimari seç
+      --asdeps     paketleri bağımlılık olarak kurulacak şekilde işaretle
+      --asexplicit     paketleri doğrudan kurulmuş paket olarak işaretle
+      --cachedir <dir> farklı bir önbellek yolu ayarla
+      --color <when>   çıktıyı renklendir
+      --config <yol>   farklı bir ayar dosyası seç
+      --confirm        her zaman onay iste
+      --debug          hata ayıklama çıktılarını göster
+      --disable-download-timeout
+                       indirirken daha sakin zaman aşımı kullan
+      --gpgdir <yol>  GnuPG için alternatif ev dizini belirt
+      --logfile <yol>  farklı bir kayıt dosyası seç
+      --noconfirm      herhangi bir onay isteme
+      --sysroot        bağlı konuk sistem üzerinde işlem yap (sadece root)
+
+yerel veritabanını doğrulamak için -k, --check ile test et (veritabanı senkronizasyonu için -kk)
+
+pacman -F
+kullanım:  pacman {-F --files} [seçenekler] [dosya(lar)]
+seçenekler:
+  -b, --dbpath <yol>   farklı bir veritabanı yolu belirle
+  -l, --list           araştırılan paketin sahibi olduğu dosyaları listele
+  -q, --quiet          sorgulama ve arama sırasında daha az bilgi göster
+  -r, --root <yol>     farklı bir kurulum kök dizini ayarla
+  -v, --verbose        ayrıntı göster
+-x, --regex ifadelerini kullanarak aramayı etkinleştir
+  -y, --refresh        sunucudan güncel paket veritabanını indir 
+                       (güncel olsa bile zorlamak için -yy kullanın)
+      --arch <arch>    alternatif bir mimari seç
+      --cachedir <dir> farklı bir önbellek yolu ayarla
+      --color <when>   çıktıyı renklendir
+      --config <yol>   farklı bir ayar dosyası seç
+      --confirm        her zaman onay iste
+      --debug          hata ayıklama çıktılarını göster
+      --disable-download-timeout
+                       indirirken daha sakin zaman aşımı kullan
+      --gpgdir <yol>  GnuPG için alternatif ev dizini belirt
+      --logfile <yol>  farklı bir kayıt dosyası seç
+--machinereadable
+makine tarafından okunabilir bir çıktı üret
+      --noconfirm      herhangi bir onay isteme
+      --sysroot        bağlı konuk sistem üzerinde işlem yap (sadece root)
+
+
+pacman -Q
+kullanım:  pacman {-Q --query} [seçenekler] [paket(ler)]
+seçenekler:
+  -b, --dbpath <yol>   farklı bir veritabanı yolu belirle
+  -c, --changelog      paketin değişim kaydını göster
+  -d, --deps           bağımlılık olarak yüklenen paketleri listele [filtre]
+  -e, --explicit       doğrudan kurulan paketleri listele [filtre]
+  -g, --groups         paket grubundaki tüm paketleri göster
+  -i, --info           paket bilgisini göster (yedek dosyaları için -ii)
+  -k, --check          paket dosyalarının varlığını kontrol et (dosya sahipliklerini görüntülemek  için -kk)
+  -l, --list           araştırılan paketin sahibi olduğu dosyaları listele
+  -m, --foreign        senkronize veritabanında bulunmayan paketleri listele [filtre]
+  -n, --native         sadece senkronize veritabanında bulunan paketleri kur [filtre]
+  -o, --owns <dosya>   <dosya> adlı dosyayı içeren paketi sorgula
+  -p, --file <paket>   veritabanı yerine paket dosyasını sorgula
+  -q, --quiet          sorgulama ve arama sırasında daha az bilgi göster
+  -r, --root <yol>     farklı bir kurulum kök dizini ayarla
+  -s, --search <regex> kurulu paketler içerisinde söz dizimine uyarak arama yap
+  -t, --unrequired     hiçbir paket tarafından isteğe bağlı olarak gereksinim duyulmayan 
+                       paketleri listele (optdepends için -tt kullanın) [filtre]
+  -u, --upgrades       güncellenebilecek paketleri listele [filtre]
+  -v, --verbose        ayrıntı göster
+      --arch <arch>    alternatif bir mimari seç
+      --cachedir <dir> farklı bir önbellek yolu ayarla
+      --color <when>   çıktıyı renklendir
+      --config <yol>   farklı bir ayar dosyası seç
+      --confirm        her zaman onay iste
+      --debug          hata ayıklama çıktılarını göster
+      --disable-download-timeout
+                       indirirken daha sakin zaman aşımı kullan
+      --gpgdir <yol>  GnuPG için alternatif ev dizini belirt
+      --logfile <yol>  farklı bir kayıt dosyası seç
+      --noconfirm      herhangi bir onay isteme
+      --sysroot        bağlı konuk sistem üzerinde işlem yap (sadece root)
+
+
+pacman -R
+kullanım:  pacman {-R --remove} [seçenekler] <paket(ler)>
+seçenekler:
+  -b, --dbpath <yol>   farklı bir veritabanı yolu belirle
+  -c, --cascade        paket(ler)i ve on(lar)a ait tüm bağımlılıkları kaldır
+  -d, --nodeps         bağımlılk sürüm denetimlerini atla (-dd tüm denetimleri atlar)
+  -n, --nosave         yapılandırma dosyalarını kaldır
+  -p, --print          işlem gerçekleştirmek yerine hedefleri görüntüle
+  -r, --root <yol>     farklı bir kurulum kök dizini ayarla
+  -s, --recursive      gereksiz bağımlılıkları kaldır
+                       (-ss doğrudan kurulmuş bağımlılıkları da içerir)
+  -u, --unneeded       gereksiz paketleri kaldır
+  -v, --verbose        ayrıntı göster
+      --arch <arch>    alternatif bir mimari seç
+      --assume-installed <paket=sürüm>
+                       bağımlılıkları sağlamak için sanal bir paket ekle
+      --cachedir <dir> farklı bir önbellek yolu ayarla
+      --color <when>   çıktıyı renklendir
+      --config <yol>   farklı bir ayar dosyası seç
+      --confirm        her zaman onay iste
+      --dbonly         sadece veritabanı girdilerini değiştir, paket dosyalarını değiştirme
+      --debug          hata ayıklama çıktılarını göster
+      --disable-download-timeout
+                       indirirken daha sakin zaman aşımı kullan
+      --gpgdir <yol>  GnuPG için alternatif ev dizini belirt
+      --logfile <yol>  farklı bir kayıt dosyası seç
+      --noconfirm      herhangi bir onay isteme
+      --noprogressbar  dosyaları indirirken durum çubuğu gösterme
+      --noscriptlet    kurulum betiği varsa çalıştırma
+      --print-format <dizgi>
+                       çıktı biçiminin nasıl gösterileceğini belirle
+      --sysroot        bağlı konuk sistem üzerinde işlem yap (sadece root)
+
+
+pacman -S
+kullanım:  pacman {-S --sync} [seçenekler] [paket(ler)]
+seçenekler:
+  -b, --dbpath <yol>   farklı bir veritabanı yolu belirle
+  -c, --clean          önbellekteki eski paketleri kaldır (hepsi için -cc)
+  -d, --nodeps         bağımlılk sürüm denetimlerini atla (-dd tüm denetimleri atlar)
+  -g, --groups         bir paket grubundaki tüm paketleri göster 
+                       (tüm grupları ve üyeleri için -gg kullanın)
+  -i, --info           paket bilgisini göster (genişletilmiş bilgi için -ii kullanın) 
+  -l, --list <depo>    depodaki paket listesini göster
+  -p, --print          işlem gerçekleştirmek yerine hedefleri görüntüle
+  -q, --quiet          sorgulama ve arama sırasında daha az bilgi göster
+  -r, --root <yol>     farklı bir kurulum kök dizini ayarla
+  -s, --search <regex> depo(lar)da söz dizimine uyan arama yap
+  -u, --sysupgrade     kurulu paketleri yükselt (-uu eski sürüme çevirmeyi etkinleştirir) 
+  -v, --verbose        ayrıntı göster
+  -w, --downloadonly   paketleri sadece indir ve kurulum ya da güncelleme yapma
+  -y, --refresh        sunucudan güncel paket veritabanını indir 
+                       (güncel olsa bile zorlamak için -yy kullanın)
+      --arch <arch>    alternatif bir mimari seç
+      --asdeps         paket(ler)i bağımlılık olarak kur
+      --asexplicit     paket(ler)i doğrudan kurulmuş paket olarak kur
+      --assume-installed <paket=sürüm>
+                       bağımlılıkları sağlamak için sanal bir paket ekle
+      --cachedir <dir> farklı bir önbellek yolu ayarla
+      --color <when>   çıktıyı renklendir
+      --config <yol>   farklı bir ayar dosyası seç
+      --confirm        her zaman onay iste
+      --dbonly         sadece veritabanı girdilerini değiştir, paket dosyalarını değiştirme
+      --debug          hata ayıklama çıktılarını göster
+      --disable-download-timeout
+                       indirirken daha sakin zaman aşımı kullan
+      --gpgdir <yol>  GnuPG için alternatif ev dizini belirt
+      --ignore <pkg>   paket güncellemesini görmezden gel (birden çok paket için kullanılabilir)
+      --ignoregroup <grp>
+                       güncelleme sırasında grubu görmezden gel (birden çok grup için kullanılabilir)
+      --logfile <yol>  farklı bir kayıt dosyası seç
+      --needed         güncel paketleri tekrar yükleme
+      --noconfirm      herhangi bir onay isteme
+      --noprogressbar  dosyaları indirirken durum çubuğu gösterme
+      --noscriptlet    kurulum betiği varsa çalıştırma
+      --overwrite <glob>
+                       overwrite conflicting files (can be used more than once)
+      --print-format <dizgi>
+                       çıktı biçiminin nasıl gösterileceğini belirle
+      --sysroot        bağlı konuk sistem üzerinde işlem yap (sadece root)
+
+pacman -T
+kullanım:  pacman {-T --deptest} [seçenekler] [paket(ler)]
+seçenekler:
+  -b, --dbpath <yol>   farklı bir veritabanı yolu belirle
+  -r, --root <yol>     farklı bir kurulum kök dizini ayarla
+  -v, --verbose        ayrıntı göster
+      --arch <arch>    alternatif bir mimari seç
+      --cachedir <dir> farklı bir önbellek yolu ayarla
+      --color <when>   çıktıyı renklendir
+      --config <yol>   farklı bir ayar dosyası seç
+      --confirm        her zaman onay iste
+      --debug          hata ayıklama çıktılarını göster
+      --disable-download-timeout
+                       indirirken daha sakin zaman aşımı kullan
+      --gpgdir <yol>   GnuPG için alternatif ev dizini belirt
+      --logfile <yol>  farklı bir kayıt dosyası seç
+      --noconfirm      herhangi bir onay isteme
+      --sysroot        bağlı konuk sistem üzerinde işlem yap (sadece root)
+
+
+pacman -U
+kullanım:  pacman {-U --upgrade} [seçenekler] <dosya(lar)>
+seçenekler:
+  -b, --dbpath <yol>   farklı bir veritabanı yolu belirle
+  -d, --nodeps         bağımlılk sürüm denetimlerini atla (-dd tüm denetimleri atlar)
+  -p, --print          işlem gerçekleştirmek yerine hedefleri görüntüle
+  -r, --root <yol>     farklı bir kurulum kök dizini ayarla
+  -v, --verbose        ayrıntı göster
+  -w, --downloadonly   paketleri sadece indir ve kurulum ya da güncelleme yapma
+      --arch <arch>    alternatif bir mimari seç
+      --asdeps         paket(ler)i bağımlılık olarak kur
+      --asexplicit     paket(ler)i doğrudan kurulmuş paket olarak kur
+      --assume-installed <paket=sürüm>
+                       bağımlılıkları sağlamak için sanal bir paket ekle
+      --cachedir <dir> farklı bir önbellek yolu ayarla
+      --color <when>   çıktıyı renklendir
+      --config <yol>   farklı bir ayar dosyası seç
+      --confirm        her zaman onay iste
+      --dbonly         sadece veritabanı girdilerini değiştir, paket dosyalarını değiştirme
+      --debug          hata ayıklama çıktılarını göster
+      --disable-download-timeout
+                       indirirken daha sakin zaman aşımı kullan
+      --gpgdir <yol>  GnuPG için alternatif ev dizini belirt
+      --ignore <pkg>   paket güncellemesini görmezden gel (birden çok paket için kullanılabilir)
+      --ignoregroup <grp>
+                       güncelleme sırasında grubu görmezden gel (birden çok grup için kullanılabilir)
+      --logfile <yol>  farklı bir kayıt dosyası seç
+      --needed         güncel paketleri tekrar yükleme
+      --noconfirm      herhangi bir onay isteme
+      --noprogressbar  dosyaları indirirken durum çubuğu gösterme
+      --noscriptlet    kurulum betiği varsa çalıştırma
+      --overwrite <glob>
+                       overwrite conflicting files (can be used more than once)
+      --print-format <dizgi>
+                       çıktı biçiminin nasıl gösterileceğini belirle
+      --sysroot        bağlı konuk sistem üzerinde işlem yap (sadece root)

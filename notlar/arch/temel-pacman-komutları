@@ -1,0 +1,74 @@
+TEMEL PACMAN KOMUTLARI
+
+Paket veritabanı güncelleme:
+sudo pacman -Sy
+
+Paketleri güncellemek için:
+sudo pacman -Su
+
+Paket veritabanı ve sistem güncelleme:
+sudo pacman -Syu
+
+Paket veritabanının tam olarak yenileme ve sistemi güncellemek için: 
+sudo pacman -Syuu
+
+Bir paket kurmak istiyor ancak paket adını tam olarak hatırlayamıyorsanız, terminalden anahtar kelime araması yapmak için:
+pacman -Ss anahtar_kelime
+
+Örneğin, Audacious medya player kurmak istiyoruz ancak adını tam hatırlayamadık
+sudo pacman -Ss audaci*
+
+Kurulu paketleri aramak için:
+sudo pacman -Qs paket_adı
+
+Tek paket kurmak için:
+sudo pacman -S paket_adı
+
+Çoklu paket kurmak için:
+sudo pacman -S paket1 paket2 paket3 
+
+Bir paketi kurmadan önce sistemi güncellemek daha iyidir. 
+Sistemi güncellemek ve paket yüklemek için aşağıdaki komutu kullanın:
+sudo pacman -Syu paket1 paket2
+
+Açıklamaları ile birlikte paket arama:
+sudo pacman -Ss paket_adi
+
+Paket hakkında bilgi alma:
+sudo pacman -Si paket_adı
+
+Bir paketi indirip kurmak istemiyorsak:
+sudo pacman -Sw paket_adı
+
+Paketleri yerel bir dizinden kurmak için:
+sudo pacman -U /home/download/paket_adı.pkg.tar.zst
+
+Resmi olmayan bir depodan bir paket kurmak için:
+sudo pacman -U https://site.com/depo/paket_adı.pkg.tar.zst
+
+Sisteminizde kurulu herhangi bir paket bilgisini öğrenmek için:
+sudo pacman -Qi paket_adı
+
+Sisteminizde kurulu tüm paketleri görmek için:
+sudo pacman -Qi
+
+Kurulu paketler içinde içinde arama:
+sudo pacman -Qs paket_adi
+
+Kullanılmayan paketleri kontrol etmek için:
+sudo pacman -Qdt
+
+Bir paketi kaldırmak ve bağımlılıklarını geride bırakmak için:
+sudo pacman -R paket_adı
+
+Tüm bağımlılıkları ile birlikte paket kaldırma:
+sudo pacman -Rsc paket_adı
+
+Bir paketi ve diğer paketler tarafından kullanılmayan bağımlılıklarını kaldırmak için:
+sudo pacman -Rsu paket_adı
+
+
+
+
+
+
