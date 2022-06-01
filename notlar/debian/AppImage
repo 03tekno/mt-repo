@@ -1,0 +1,22 @@
+AppImage nasıl çalıştırılır?
+
+AppImage dosyamızın program gibi çalışmasına izin verelim
+chmod +x paket_name.AppImage
+
+Apprepo diye dizin oluşturup içine istediğimiz kadar AppImage dosyası atalım. Tek komutta hepsine çalıştır izini vermek için:
+chmod +x /Apprepo/*.AppImage veya chmod +x /Apprepo/*.AppImage komutu vermemiz yeterlidir.
+
+AppImage çalıştırma:
+./paket_name.AppImage
+
+
+Daha pratik olarak: 
+AppImageLauncher ile pardus deposunda mevcuttur. Kullanımı çok pratik harika bir başlatıcıdır.
+Pardus mağazada appimage başlatıcı ismiyle aratıp kurabiliriz. Yada terminalden aşağıdaki komutla kurabiliriz.
+sudo apt install appimagelauncher 
+
+
+AppImage ayıklama işlemi:
+./paket_name.AppImage --appimage-extract
+cd squashfs-root
+./AppRun

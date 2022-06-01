@@ -1,0 +1,59 @@
+TEMEL APT ve DPKG KOMUTLARI
+
+Paket kaynaklarını güncellemek için: 
+(Debian tabanlı sistemlerde ana kaynak deposu /etc/apt/sources.list dosyasında bulunur.)
+sudo apt update 
+
+Paket listelerini güncellemek için: 
+sudo apt upgrade
+
+Sistemi tamamen güncellemek için:
+sudo apt-get dist-upgrade
+
+Paket aramak için:
+apt search paket_adı
+
+Paket adını tam olarak hatırlayamıysak, terminalden anahtar kelime araması yapmak için:
+apt search paket* Örneğin, Audacious isimli paketi arayalım
+sudo apt search auda* (auda ile başlayan tüm paketleri listeler)
+
+Paket hakkında bilgi almak için:
+sudo apt-cache show paket_adı
+
+Tek paket kurmak için:
+sudo apt install paket_adı
+
+Çoklu paket kurmak için:
+sudo apt install paket1 paket2 paket3 
+
+Paketleri yerel bir dizinden kurmak için:
+sudo dpkg -i paket_adı.deb && sudo apt install -f
+
+Site üzerinden paket kurmak için:
+wget https://site.com/depo/paket_adı.deb && sudo dpkg -i paket_adı.deb && sudo apt install -f
+
+Sisteminizde kurulu tüm paketleri görmek için:
+apt list --installed veya dpkg-query -l
+
+Bir paketi indirip kurmak istemiyorsak:
+sudo apt install paket_adı -d
+
+Bir paketi kaldırmak için:
+sudo apt remove paket_adı
+
+Bir paketi ve diğer paketler tarafından kullanılmayan bağımlılıklarını kaldırmak için:
+sudo apt purge paket_adı
+
+Kullanılmayan paketlerin yapılandırma dosyalarını kaldırmak için:
+sudo apt autoremove
+
+Sistemde /var/cache/apt/archives/ dizininde tutulan paketleri silmek için:
+sudo apt-get clean
+
+apt-get autoclean (bu komut apt-get clean komutuyla benzer şekilde arşivlenmiş paketleri silme işlemini yapar. 
+Fakat burada silinen arşivler bütün arşiv paketleri değil sadece eski sürüm olup artık kullanımda olmayan ve depolardan kaldırılmış paketlerdir.)
+
+Geri tutuldu olarak işaretleme komutu. Kurulamaz, yükseltilemez, kaldırılamaz veya temizlenemez.
+sudo apt-mark hold paket_adı
+İptal etmek için:
+sudo apt-mark unhold paket_adı

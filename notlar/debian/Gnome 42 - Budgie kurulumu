@@ -1,0 +1,16 @@
+Pardus Yirmibir/Debian Bullseye işletim sistemlerinde Gnome 42 kurulumu nasıl yapılır?
+
+Önce Debian Unstable depoyu ekliyoruz (Bakınız: https://github.com/mobilturka/Debian-notlar/blob/main/depo%20ekleme)
+sudo apt update yapıyoruz
+sudo apt -t sid install gnome-session gnome-shell gnome-backgrounds gnome-applets gnome-control-center mutter gjs
+
+
+Pardus Yirmibir/Debian Bullseye için Budgie masaüstü kurulumu 
+
+Gnome yada Xfce kurulu Pardus/Debian sisteminize kurmak için ise: 
+sudo apt -t testing install budgie-desktop budgie*-applet plank
+
+Sonrasında bilgisayarı yeniden başlatalım
+Budgie Masaüstü Ayarlarından üst panel kısmında varsayılan menü yerine App Menüyü ekleyin diğer menüyü kaldırın.
+Kendi zevkinize göre theme ve icon paketleri yükleyebilirsiniz.
+arc-theme ve elementary-icon-theme ile harika görünüm elde etmek mümkün :)

@@ -1,0 +1,46 @@
+DEBIAN RESMİ DEPOLARI:
+
+Debian tabanlı işletim sistemlerinde ana depo /etc/apt/sources.list içindedir. 
+
+deb http://deb.debian.org/debian bullseye main contrib non-free
+deb-src http://deb.debian.org/debian bullseye main contrib non-free
+
+deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
+
+****************************************************************************************
+
+Debian Backports depo adresi:
+deb http://deb.debian.org/debian bullseye-backports main contrib non-free
+deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free
+
+Debian Testing depo adresi:
+deb https://deb.debian.org/debian testing main contrib non-free
+
+Debian Unstable depo adresi:
+deb https://deb.debian.org/debian sid main contrib non-free
+
+*****************************************************************************************
+
+ÖRNEK: DEBIAN TESTING DEPO EKLEME İŞLEMLERİ
+
+Debian backport, testing veya unstable depoların ana depo yerine /etc/apt/sources.list.d/ dizini içine kurulması önerilir.
+
+Debian testing depo eklemek için:
+echo 'deb https://deb.debian.org/debian testing main contrib non-free' | sudo tee /etc/apt/sources.list.d/testing.list && sudo apt update
+
+Depoyu pasif etmek için: 
+Testing depoyu pasif etmek için:
+echo '#deb https://deb.debian.org/debian testing main contrib non-free' | sudo tee /etc/apt/sources.list.d/testing.list && sudo apt update
+
+Depoyu silmek için:
+Testing depoyu silmek için ise:
+sudo rm /etc/apt/sources.list.d/testing.list
+
+*****************************************************************************************
+
+Eklenen depodan paket kurulumu yapmak için örnek komut: 
+sudo apt install -t testing gimp

@@ -1,0 +1,189 @@
+Pardus vs Debian non-free firmware karşılaştırması
+
+arm-trusted-firmware-tools 2.4+dfsg-2 (Debian)
+atmel-firmware
+bluez-firmware
+dahdi-firmware-nonfree
+firmware-amd-graphics
+firmware-ath9k-htc
+firmware-atheros
+firmware-b43-installer
+firmware-b43legacy-installer
+firmware-bnx2
+firmware-bnx2x
+firmware-brcm80211
+firmware-cavium
+firmware-intel-sound
+firmware-intelwimax
+firmware-ipw2x00
+firmware-ivtv
+firmware-iwlwifi
+firmware-libertas
+firmware-linux
+firmware-linux-free
+firmware-linux-nonfree
+firmware-microbit-micropython 1.0.1-2 (Debian)
+firmware-microbit-micropython-doc 1.0.1-2 (Debian)
+firmware-misc-nonfree
+firmware-myricom
+firmware-netronome
+firmware-netxen
+firmware-qcom-media 20210315-3 (Debian)
+firmware-qcom-soc
+firmware-qlogic
+firmware-realtek
+firmware-samsung
+firmware-siano
+firmware-sof-signed
+firmware-ti-connectivity
+firmware-tomu 2.0~rc7-2 (Debian)
+firmware-zd1211
+hdmi2usb-fx2-firmware
+gnome-firmware 3.36.0-1 (Debian)
+grub-firmware-qemu 2.04-20 (Debian)
+midisport-firmware 1.2-4 (Debian)
+sigrok-firmware-fx2lafw 0.1.7-1 (Debian)
+ubertooth-firmware 2018.12.R1-5 (Debian)
+ubertooth-firmware-source 2018.12.R1-5 (Debian)
+
+Firmware nedir?
+Firmware kısaca: Cihazlarımızda bulunan donanım elemanlarının çalışmasını sağlayan yazılımdır.
+
+PARDUS işletim sisteminde hangi firmwareler kurulu geliyor ve ne işe yararlar?
+
+Pardus 21.2 sürümünü referans alarak packages.debian.org sitesinden yaptığım araştırma
+
+atmel-firmware
+Atmel at76c50x kablosuz ağ yongaları için bellenim.
+Linux 2.6.x çekirdeğindeki bu yongaların sürücüleri bellenimi içermez; bu bellenimin, bu yongaları kullanan çoğu karta ana bilgisayar tarafından yüklenmesi gerekir. Bu paket, hotplug sisteminin ihtiyaç duyduğu şekilde otomatik olarak yüklenmesi gereken üretici yazılımı görüntülerini sağlar. Ayrıca, hotplug kullanılmadığında aynı şeyi gerçekleştirmek için kullanılabilecek küçük bir yükleyici yardımcı programı sağlar.
+
+bluez-firmware
+Bluetooth cihazları için bellenim
+Bu bellenim, Broadcom BCM203x yonga setine dayalı Bluetooth dongle’larının çalışması için gereklidir.
+
+dahdi-firmware-nonfree
+DAHDI özgür olmayan bellenim
+DAHDI (eski adıyla Zaptel), örn. Asterisk PBX yazılımı. Dahdi-* paketleri, DAHDI çekirdek modüllerini ve bunların gerekli kurulum ortamını sağlar.
+
+firmware-amd-graphics
+AMD/ATI grafik yongaları için ikili bellenim
+Bu paket, radeon, amdgpu ve r128 sürücüleri tarafından desteklenen AMD/ATI grafik yongaları için ikili bellenimi içerir.
+
+firmware-ath9k-htc
+AR7010 ve AR9271 USB kablosuz adaptörler için bellenim
+Qualcomm Atheros AR7010 ve AR9271 yonga setleri, 802.11n özellikli USB kablosuz adaptörlerde kullanılmaktadır. Bu paket, çalışması için gerekli olan ve kullanım sırasında cihazlara yüklenen ücretsiz bellenimi içerir.
+
+firmware-atheros
+Qualcomm Atheros kablosuz kartları için ikili bellenim
+Bu paket, ar5523, ath3k, ath6kl_sdio, ath6kl_usb, ath9k_htc, ath10k veya wilc6210 sürücüleri tarafından desteklenen USB kablosuz ağ ve Bluetooth kartları için ikili bellenimi içerir.
+
+firmware-b43-installer
+b43 sürücüsü için üretici yazılımı yükleyicisi
+Bu paket, bazı Broadcom 43xx kablosuz ağ kartları için b43 çekirdek sürücüsünün ihtiyaç duyduğu üretici yazılımını indirir ve kurar.
+
+firmware-b43legacy-installer
+b43legacy sürücüsü için üretici yazılımı yükleyicisi
+Bu paket, bazı Broadcom 43xx kablosuz ağ kartları için b43legacy çekirdek sürücüsünün ihtiyaç duyduğu üretici yazılımını indirir ve kurar.
+
+firmware-bnx2
+Broadcom NetXtremeII için ikili bellenim
+Bu paket, bnx2 sürücüsü tarafından desteklenen Broadcom NetXtremeII ağ bağdaştırıcıları için ikili bellenimi içerir.
+
+firmware-bnx2x
+Broadcom NetXtreme II 10Gb için ikili bellenim
+Bu paket, bnx2x sürücüsü tarafından desteklenen Broadcom NetXtreme II 10Gb ağ bağdaştırıcıları için ikili bellenimi içerir.
+
+firmware-brcm80211
+Broadcom/Cypress 802.11 kablosuz kartları için ikili bellenim
+Bu paket, brcmsmac veya brcmfmac sürücüsü tarafından desteklenen kablosuz ağ kartları için ikili bellenimi içerir.
+
+firmware-cavium
+Cavium Ethernet adaptörleri için ikili bellenim
+Bu paket, nitrox ve Liquidio sürücüleri tarafından desteklenen Cavium kripto ve Ethernet adaptörleri için ikili bellenimi içerir.
+
+firmware-intel-sound
+Intel ses DSP’leri için ikili bellenim
+Bu paket, snd-soc-sst-acpi veya snd-intel-sst-acpi sürücüsü tarafından desteklenen Intel SST ses DSP’leri için ikili bellenimi içerir.
+
+firmware-intelwimax
+Intel WiMAX Bağlantısı için ikili bellenim
+Bu paket, i2400m-usb sürücüsü tarafından desteklenen Intel WiMAX Bağlantı aygıtları için ikili bellenimi içerir.
+
+firmware-ipw2x00
+Intel Pro Wireless 2100, 2200 ve 2915 için ikili bellenim
+Bu paket, ipw2100 ve ipw2200 sürücüleri tarafından desteklenen Intel Pro Wireless 2100, 2200 ve 2915 kartları için ikili bellenimi içerir.
+
+firmware-ivtv
+iTVC15 ailesi MPEG codec bileşenleri için ikili bellenim (ivtv ve pvrusb2 sürücüleri)
+Bu paket, ivtv ve pvrusb2 sürücüleri tarafından desteklenen Conexant iTVC15 ailesi MPEG codec bileşenlerine sahip TV kartları için ikili bellenimi içerir.
+
+firmware-iwlwifi
+Intel Kablosuz kartları için ikili bellenim
+Bu paket, iwl3945, iwl4965 ve iwlwifi sürücüleri tarafından desteklenen Intel Kablosuz kartları için ikili bellenimi içerir.
+
+firmware-libertas
+Marvell kablosuz kartları için ikili bellenim
+Bu paket, libertas_cs, libertas_sdio, libertas_spi, libertas_tf_usb, mwifiex_pcie, mwifiex_sdio, mwifiex_usb, mwl8k ve usb8xxx sürücüleri tarafından desteklenen Marvell ve NXP 88W8xxx yongalarına sahip kablosuz ağ kartları için ikili bellenimi içerir.
+
+firmware-linux
+Linux çekirdeğindeki (metapackage) çeşitli sürücüler için ikili bellenim
+Bu paket, Linux çekirdeğindeki sürücülerle kullanılabilecek hem ücretsiz hem de özgür olmayan bellenime bağlıdır.
+
+firmware-linux-free
+Bu paket, daha önce Linux çekirdeğine dahil edilen ve Debian Özgür Yazılım Yönergeleri ile uyumlu bellenimi içerir. Daha önce Linux çekirdeğine dahil edilen çoğu üretici yazılımı özgür değildir ve üretici yazılımı-linux-özgür olmayan paketine taşınmıştır.
+
+firmware-linux-nonfree
+Linux çekirdeğindeki (metapackage) çeşitli sürücüler için ikili bellenim
+Bu paket, Linux çekirdeğindeki sürücülerle kullanılabilecek özgür olmayan bellenime bağlıdır.
+
+firmware-misc-nonfree
+Linux çekirdeğindeki çeşitli sürücüler için ikili bellenim
+Bu paket, Linux çekirdeğindeki çeşitli sürücüler için ikili bellenimi içerir. Bu, bağımsız bir paketi garanti etmek için tek tek yeterince büyük olmayan bir ürün yazılımı blobları koleksiyonudur.
+
+firmware-myricom
+Myri-10G Ethernet adaptörleri için ikili bellenim
+Bu paket, myri10ge sürücüsü tarafından desteklenen Myricom Myri-10G Ethernet adaptörleri için ikili bellenimi içerir.
+
+firmware-netronome
+Netronome ağ bağdaştırıcıları için ikili bellenim
+Bu paket, nfp sürücüsü tarafından desteklenen Netronome ağ bağdaştırıcıları için ikili bellenimi içerir.
+
+firmware-netxen
+QLogic Intelligent Ethernet (3000 ve 3100 Serisi) için ikili bellenim
+Bu paket, netxen_nic ve qlcnic sürücüleri tarafından desteklenen QLogic (eski adıyla NetXen) Akıllı ağ bağdaştırıcıları için ikili bellenimi içerir.
+
+firmware-qcom-soc
+Qualcomm SoC’ler için ikili bellenim
+Bu paket, Qualcomm Snapdragon SoC’ler için ikili bellenimi içerir.
+
+firmware-qlogic
+QLogic HBA’lar için ikili bellenim
+Bu paket, bfa, bna, ip_iband, qed, qla1280 ve qla2xxx sürücüleri tarafından desteklenen QLogic Infiniband, SCSI, Fiber Kanal/FCoE adaptörleri ve Birleşik Ağ Adaptörleri için ikili bellenimi içerir.
+
+firmware-realtek
+Realtek kablolu/wifi/BT adaptörleri için ikili bellenim
+Bu paket, çeşitli sürücüler tarafından desteklenen Realtek Ethernet, wifi ve Bluetooth adaptörleri için ikili bellenimi içerir.
+
+firmware-samsung
+Samsung MFC video codec bileşenleri için ikili bellenim
+Bu paket, Exynos SoC’lerde kullanılan ve s5p-mfc sürücüsü tarafından desteklenen Samsung MFC video codec bileşenleri için ikili bellenimi içerir.
+
+firmware-siano
+Siano MDTV alıcıları için ikili bellenim
+Bu paket, smsmdtv sürücüsü tarafından desteklenen Siano Mobil Dijital TV alıcıları için ikili bellenimi içerir.
+
+firmware-sof-signed
+Intel SOF üretici yazılımı - imzalı
+Bazı Intel sistemlerinde ses işlevselliği için gereken Intel SOF ses sabit yazılımını ve topolojisini sağlar.
+
+firmware-ti-connectivity
+TI Connectivity wifi ve BT/FM/GPS adaptörleri için ikili bellenim
+Bu paket, wl1251, wl12xx ve wl18xx sürücüleri tarafından desteklenen Texas Instruments WL1251, WL127x, WL128x ve WL18xx kablosuz ağ yongaları için ikili bellenimi ve st_drv sürücüsü tarafından desteklenen BT/FM/GPS yongalarını içerir.
+
+firmware-zd1211
+zd1211rw kablosuz sürücüsü için ikili bellenim
+Bu paket, aşağıdaki yonga setlerine dayalı USB kablosuz dongle’lar için zd1211rw Linux çekirdek sürücüsü ile kullanılacak bellenimi içerir:
+
+hdmi2usb-fx2-firmware
+hdmi2usb kartı geliştirme için FX2 üretici yazılımı
+Bu paket, Numato Opsis kartının USB arabiriminin çeşitli modları için FX2 aygıt yazılımını içerir.

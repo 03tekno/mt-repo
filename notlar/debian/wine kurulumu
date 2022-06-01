@@ -1,0 +1,20 @@
+Pardus21/Debian11 için Wine kurulumu:
+
+sudo su komutuyla root alalım.
+
+wget https://dl.winehq.org/wine-builds/winehq.key && apt update && dpkg --add-architecture i386 && apt install software-properties-common && apt-key add winehq.key && echo 'deb https://dl.winehq.org/wine-builds/debian/ bullseye main'> /etc/apt/sources.list.d/winehq.list && apt update && apt install --install-recommends winehq-stable -y && rm winehq.key && exit
+
+Not: Verdiğim komut Wine stable sürümü için olup Wine geliştirici sürümü kurmak isterseniz:
+apt install --install-recommends winehq-stable kısmını apt install --install-recommends winehq-devel olarak değiştirebilirsiniz.
+
+Wine kurulumu tamamlandı. Şimdi aşağıdaki komutları girelim.
+wine --version komutu ile versiyon kontrolü yapıp 
+winecfg komutu ile wine mono yükleyiciyi yükleyelim.
+
+Windows platformuna ait .exe dosyalarına sağ tıklayıp “Wine ile aç” şeklinde dosyalarını çalıştırabilirsiniz…
+
+Wine sistemden kaldırmak için ise:
+sudo apt purge wine* ve sudo apt autoremove komutlarını kullanmalısınız.
+
+Ayrıca /etc/apt/sources.list.d/winehq.list dosyasını da silmeniz gerekmektedir.
+sudo rm -rf /etc/apt/sources.list.d/winehq.list

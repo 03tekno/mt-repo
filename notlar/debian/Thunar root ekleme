@@ -1,0 +1,12 @@
+Thunar dosya yöneticisini açalım
+Düzenle - Özelleştirilmiş eylemleri yapılandır tıklayalım
+Yeni özel eylem eklemek için Sağ tarafta bulunan (+) ya tıklayalım
+
+Temel Menüde
+Ad kısmına: Yönetici haklarıyla aç yada root haklarıyla aç diyebiliriz
+Komut kısmına: pkexec thunar %f
+Simge ye tıkla ve tüm simgelerden gcr-key seç (benim tercihim bu)
+
+Görünüm durumları menüde
+dizinleri işaretleyelim
+işlem bu kadar.
