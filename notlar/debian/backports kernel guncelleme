@@ -13,17 +13,3 @@ sudo apt -t bullseye-backports upgrade
 Paket kurmak için ise: (Örnek: Telegram kuralım)
 sudo apt install -t bullseye-backports telegram-desktop
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-PARDUS 21 YİRMİBİR-BACKPORTS DEPO EKLEME VE KERNEL GÜNCELLEME İŞLEMİ
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Depoyu eklemek için:
-echo 'deb http://depo.pardus.org.tr/backports yirmibir-backports main contrib non-free' | sudo tee /etc/apt/sources.list.d/yirmibir-backports.list && sudo apt update
-
-Kernel güncellemek için:
-sudo apt install -t yirmibir-backports linux-image-amd64
-
-Sistemi tam yükseltmek için:
-sudo apt -t yirmibir-backports upgrade
-
-Paket kurmak için ise: (Örnek: Telegram kuralım)
-sudo apt install -t yirmibir-backports telegram-desktop
