@@ -4,7 +4,7 @@ AppImage dosyamızın program gibi çalışmasına izin verelim
 chmod +x paket_name.AppImage
 
 Apprepo diye dizin oluşturup içine istediğimiz kadar AppImage dosyası atalım. Tek komutta hepsine çalıştır izini vermek için:
-chmod +x /Apprepo/*.AppImage veya chmod +x /Apprepo/*.AppImage komutu vermemiz yeterlidir.
+chmod +x /Apprepo/*.AppImage komutu vermemiz yeterlidir.
 
 AppImage çalıştırma:
 ./paket_name.AppImage
