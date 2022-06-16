@@ -22,8 +22,7 @@ sudo snap install snap-store
 Bilgisayarı yeniden başlatın
 
 6- PARDUS FLATPAK KURULUMU
-sudo su
-apt install flatpak
+sudo apt install flatpak
 
 Pardus Gnome kullanıyorsanız
 apt install gnome-software-plugin-flatpak
