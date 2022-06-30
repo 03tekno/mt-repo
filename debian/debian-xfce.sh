@@ -6,11 +6,11 @@ apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi d
 #debian-chroot dosyası oluşturalım
 mkdir debian-chroot
 chown root debian-chroot
-debootstrap --arch=amd64 sid debian-chroot https://deb.debian.org/debian
+debootstrap --arch=amd64 testing debian-chroot https://deb.debian.org/debian
 for i in dev dev/pts proc sys; do mount -o bind /$i debian-chroot/$i; done
 
 #Debian testing depo ekleyelim
-echo 'deb https://deb.debian.org/debian sid main contrib non-free' > debian-chroot/etc/apt/sources.list
+echo 'deb https://deb.debian.org/debian testing main contrib non-free' > debian-chroot/etc/apt/sources.list
 chroot debian-chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
@@ -20,20 +20,43 @@ chroot debian-chroot apt-get install live-config live-boot -y
 chroot debian-chroot apt-get install xorg xinit -y
 
 #Firmware paketlerini kuralım (Kurulmasını istemediğiniz firmware paketini silebilirsiniz.)
-chroot debian-chroot apt-get install -y atmel-firmware bluez-firmware dahdi-firmware-nonfree \
-  firmware-amd-graphics firmware-ath9k-htc firmware-atheros \
-  firmware-b43-installer firmware-b43legacy-installer firmware-bnx2 \
-  firmware-bnx2x firmware-brcm80211 firmware-cavium \
-  firmware-intel-sound firmware-intelwimax firmware-ipw2x00 \
-  firmware-ivtv firmware-iwlwifi firmware-libertas \
-  firmware-linux firmware-linux-free firmware-linux-nonfree \
-  firmware-misc-nonfree firmware-myricom firmware-netronome \
-  firmware-netxen firmware-qcom-soc firmware-qlogic \
-  firmware-realtek firmware-samsung firmware-siano \
-  firmware-sof-signed firmware-ti-connectivity firmware-zd1211 hdmi2usb-fx2-firmware
-
+chroot debian-chroot apt-get install atmel-firmware -y
+chroot debian-chroot apt-get install bluez-firmware -y
+chroot debian-chroot apt-get install dahdi-firmware-nonfree -y
+chroot debian-chroot apt-get install firmware-amd-graphics -y
+chroot debian-chroot apt-get install firmware-ath9k-htc -y
+chroot debian-chroot apt-get install firmware-atheros -y
+chroot debian-chroot apt-get install firmware-b43-installer -y
+chroot debian-chroot apt-get install firmware-b43legacy-installer -y
+chroot debian-chroot apt-get install firmware-bnx2 -y
+chroot debian-chroot apt-get install firmware-bnx2x -y
+chroot debian-chroot apt-get install firmware-brcm80211 -y
+chroot debian-chroot apt-get install firmware-cavium -y
+chroot debian-chroot apt-get install firmware-intel-sound -y
+chroot debian-chroot apt-get install firmware-intelwimax -y
+chroot debian-chroot apt-get install firmware-ipw2x00 -y
+chroot debian-chroot apt-get install firmware-ivtv -y
+chroot debian-chroot apt-get install firmware-iwlwifi -y
+chroot debian-chroot apt-get install firmware-libertas -y
+chroot debian-chroot apt-get install firmware-linux -y
+chroot debian-chroot apt-get install firmware-linux-free -y
+chroot debian-chroot apt-get install firmware-linux-nonfree -y
+chroot debian-chroot apt-get install firmware-misc-nonfree -y
+chroot debian-chroot apt-get install firmware-myricom -y
+chroot debian-chroot apt-get install firmware-netronome -y
+chroot debian-chroot apt-get install firmware-netxen -y
+chroot debian-chroot apt-get install firmware-qcom-soc -y
+chroot debian-chroot apt-get install firmware-qlogic -y
+chroot debian-chroot apt-get install firmware-realtek -y
+chroot debian-chroot apt-get install firmware-samsung -y
+chroot debian-chroot apt-get install firmware-siano -y
+chroot debian-chroot apt-get install firmware-sof-signed -y
+chroot debian-chroot apt-get install firmware-ti-connectivity -y
+chroot debian-chroot apt-get install firmware-zd1211 -y
+chroot debian-chroot apt-get install hdmi2usb-fx2-firmware -y
+  
 chroot debian-chroot apt-get install xfce4 xfce4-goodies parole network-manager-gnome -y
-chroot debian-chroot apt-get install blueman gvfs-backends synaptic gdebi firefox firefox-l10n-tr -y
+chroot debian-chroot apt-get install blueman gvfs-backends synaptic gdebi firefox-esr firefox-esr-l10n-tr -y
 chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan -y
 
 #Gereksiz paketleri silelim
