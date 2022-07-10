@@ -14,7 +14,7 @@ echo 'deb https://deb.debian.org/debian testing main contrib non-free' > debian-
 chroot debian-chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
-chroot debian-chroot apt-get install linux-image-amd64 -y
+chroot debian-chroot apt-get install linux-image-amd64 linux-headers-amd64 -y
 chroot debian-chroot apt-get install grub-pc-bin grub-efi-ia32-bin grub-efi -y
 chroot debian-chroot apt-get install live-config live-boot -y 
 chroot debian-chroot apt-get install xorg xinit -y
