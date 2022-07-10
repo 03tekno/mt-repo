@@ -55,7 +55,7 @@ chroot debian-chroot apt-get install firmware-ti-connectivity -y
 chroot debian-chroot apt-get install firmware-zd1211 -y
 chroot debian-chroot apt-get install hdmi2usb-fx2-firmware -y
   
-chroot debian-chroot apt-get install xfce4 xfce4-goodies parole network-manager-gnome -y
+chroot debian-chroot apt-get install xfce4 xfce4-goodies parole network-manager-gnome papirus-icon-theme -y
 chroot debian-chroot apt-get install blueman gvfs-backends synaptic gdebi firefox-esr firefox-esr-l10n-tr -y
 chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan -y
 
