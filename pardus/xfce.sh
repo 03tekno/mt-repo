@@ -54,7 +54,7 @@ chroot kaynak apt-get install -y atmel-firmware bluez-firmware dahdi-firmware-no
 chroot kaynak apt-get install xfce4 xfce4-goodies mugshot network-manager-gnome -y
 
 ### İsteğe bağlı paketleri kuralım
-chroot kaynak apt-get install blueman gvfs-backends neofetch gnome-calculator file-roller librewolf synaptic rar neofetch -y
+chroot kaynak apt-get install blueman gvfs-backends neofetch gnome-calculator file-roller synaptic rar -y
 
 ### Pardus paketleri kuralım 
 chroot kaynak apt-get install pardus-common-desktop pardus-configure pardus-xfce-settings pardus-locales -y
@@ -65,7 +65,7 @@ chroot kaynak apt-get install pardus-dolunay-grub-theme pardus-gtk-theme pardus-
 chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan -y
 
 ### zorunlu kurulu gelen paketleri silelim (isteğe bağlı)
-chroot kaynak apt-get remove xterm termit xarchiver firefox-esr icedtea-netx -y
+chroot kaynak apt-get remove xterm termit xarchiver icedtea-netx -y
 
 ### Zorunlu değil ama grub güncelleyelim
 chroot kaynak update-grub
