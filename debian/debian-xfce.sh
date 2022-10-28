@@ -14,7 +14,7 @@ echo 'deb https://deb.debian.org/debian testing main contrib non-free' > debian-
 chroot debian-chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
-chroot debian-chroot apt-get install linux-image-amd64 linux-headers-amd64 -y
+chroot debian-chroot apt-get install linux-image-amd64 -y
 chroot debian-chroot apt-get install grub-pc-bin grub-efi-ia32-bin grub-efi -y
 chroot debian-chroot apt-get install live-config live-boot -y 
 chroot debian-chroot apt-get install xorg xinit -y
@@ -56,11 +56,11 @@ chroot debian-chroot apt-get install firmware-zd1211 -y
 chroot debian-chroot apt-get install hdmi2usb-fx2-firmware -y
   
 chroot debian-chroot apt-get install xfce4 xfce4-goodies parole network-manager-gnome papirus-icon-theme -y
-chroot debian-chroot apt-get install blueman gvfs-backends inxi mintstick synaptic gdebi firefox-esr firefox-esr-l10n-tr -y
+chroot debian-chroot apt-get install blueman gvfs-backends inxi mintstick synaptic file-roller gdebi firefox-esr firefox-esr-l10n-tr -y
 chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan -y
 
 #Gereksiz paketleri silelim
-chroot debian-chroot apt-get remove xterm -y
+chroot debian-chroot apt-get remove xarchiver xterm -y
 
 #chroot debian-chroot /bin/bash
 umount -lf -R debian-chroot/* 2>/dev/null
