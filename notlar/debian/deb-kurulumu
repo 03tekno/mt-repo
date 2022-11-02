@@ -1,0 +1,6 @@
+.deb paketlerinin terminalden kurulumu 
+
+1- sudo dpkg -i /dizin/paket_adı.deb
+sudo apt-get install -f
+
+2- sudo apt install ./paket_adı.deb
