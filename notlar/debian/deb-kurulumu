@@ -1,6 +1,17 @@
 .deb paketlerinin terminalden kurulumu 
 
-1- sudo dpkg -i /dizin/paket_adı.deb
-sudo apt-get install -f
+1- sudo dpkg -i /dizin/paket_adı.deb (paketi kurar)
+sudo apt-get install -f (eksik kalan bağımlılık paketleri kurar)
 
 2- sudo apt install ./paket_adı.deb
+
+
+
+Paketlerin bağımlılık sorunlarına ilişkin yada bozuk paketlerin oluştuğu durumlarda aşağıdaki komutlar kullanılır
+
+sudo apt update
+sudo apt clean && sudo apt autoremove
+sudo apt-get update && sudo apt-get upgrade
+sudo dpkg --configure -a
+sudo apt-get install -f
+sudo apt --fix-broken
