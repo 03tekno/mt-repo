@@ -14,50 +14,54 @@ echo 'deb https://deb.debian.org/debian testing main contrib non-free' > debian-
 chroot debian-chroot apt-get update
 
 #Kernel Grub Live Xorg ve Xinit paketleri kuralım
-chroot debian-chroot apt-get install linux-image-amd64 -y
+chroot debian-chroot apt-get install linux-image-amd64 linux-header-amd64 -y
 chroot debian-chroot apt-get install grub-pc-bin grub-efi-ia32-bin grub-efi -y
 chroot debian-chroot apt-get install live-config live-boot -y 
 chroot debian-chroot apt-get install xorg xinit -y
 
 #Firmware paketlerini kuralım (Kurulmasını istemediğiniz firmware paketini silebilirsiniz.)
-chroot debian-chroot apt-get install atmel-firmware -y
-chroot debian-chroot apt-get install bluez-firmware -y
-chroot debian-chroot apt-get install dahdi-firmware-nonfree -y
-chroot debian-chroot apt-get install firmware-amd-graphics -y
-chroot debian-chroot apt-get install firmware-ath9k-htc -y
-chroot debian-chroot apt-get install firmware-atheros -y
-chroot debian-chroot apt-get install firmware-b43-installer -y
-chroot debian-chroot apt-get install firmware-b43legacy-installer -y
-chroot debian-chroot apt-get install firmware-bnx2 -y
-chroot debian-chroot apt-get install firmware-bnx2x -y
-chroot debian-chroot apt-get install firmware-brcm80211 -y
-chroot debian-chroot apt-get install firmware-cavium -y
-chroot debian-chroot apt-get install firmware-intel-sound -y
-chroot debian-chroot apt-get install firmware-intelwimax -y
-chroot debian-chroot apt-get install firmware-ipw2x00 -y
-chroot debian-chroot apt-get install firmware-ivtv -y
-chroot debian-chroot apt-get install firmware-iwlwifi -y
-chroot debian-chroot apt-get install firmware-libertas -y
+# chroot debian-chroot apt-get install atmel-firmware -y
+# chroot debian-chroot apt-get install bluez-firmware -y
+# chroot debian-chroot apt-get install dahdi-firmware-nonfree -y
+# chroot debian-chroot apt-get install firmware-amd-graphics -y
+# chroot debian-chroot apt-get install firmware-ath9k-htc -y
+# chroot debian-chroot apt-get install firmware-atheros -y
+# chroot debian-chroot apt-get install firmware-b43-installer -y
+# chroot debian-chroot apt-get install firmware-b43legacy-installer -y
+# chroot debian-chroot apt-get install firmware-bnx2 -y
+# chroot debian-chroot apt-get install firmware-bnx2x -y
+# chroot debian-chroot apt-get install firmware-brcm80211 -y
+# chroot debian-chroot apt-get install firmware-cavium -y
+# chroot debian-chroot apt-get install firmware-intel-sound -y
+# chroot debian-chroot apt-get install firmware-intelwimax -y
+# chroot debian-chroot apt-get install firmware-ipw2x00 -y
+# chroot debian-chroot apt-get install firmware-ivtv -y
+# chroot debian-chroot apt-get install firmware-iwlwifi -y
+# chroot debian-chroot apt-get install firmware-libertas -y
 chroot debian-chroot apt-get install firmware-linux -y
-chroot debian-chroot apt-get install firmware-linux-free -y
-chroot debian-chroot apt-get install firmware-linux-nonfree -y
-chroot debian-chroot apt-get install firmware-misc-nonfree -y
-chroot debian-chroot apt-get install firmware-myricom -y
-chroot debian-chroot apt-get install firmware-netronome -y
-chroot debian-chroot apt-get install firmware-netxen -y
-chroot debian-chroot apt-get install firmware-qcom-soc -y
-chroot debian-chroot apt-get install firmware-qlogic -y
+# chroot debian-chroot apt-get install firmware-linux-free -y
+# chroot debian-chroot apt-get install firmware-linux-nonfree -y
+# chroot debian-chroot apt-get install firmware-misc-nonfree -y
+# chroot debian-chroot apt-get install firmware-myricom -y
+# chroot debian-chroot apt-get install firmware-netronome -y
+# chroot debian-chroot apt-get install firmware-netxen -y
+# chroot debian-chroot apt-get install firmware-qcom-soc -y
+# chroot debian-chroot apt-get install firmware-qlogic -y
 chroot debian-chroot apt-get install firmware-realtek -y
-chroot debian-chroot apt-get install firmware-samsung -y
-chroot debian-chroot apt-get install firmware-siano -y
-chroot debian-chroot apt-get install firmware-sof-signed -y
-chroot debian-chroot apt-get install firmware-ti-connectivity -y
-chroot debian-chroot apt-get install firmware-zd1211 -y
-chroot debian-chroot apt-get install hdmi2usb-fx2-firmware -y
+# chroot debian-chroot apt-get install firmware-samsung -y
+# chroot debian-chroot apt-get install firmware-siano -y
+# chroot debian-chroot apt-get install firmware-sof-signed -y
+# chroot debian-chroot apt-get install firmware-ti-connectivity -y
+# chroot debian-chroot apt-get install firmware-zd1211 -y
+# chroot debian-chroot apt-get install hdmi2usb-fx2-firmware -y
   
-chroot debian-chroot apt-get install xfce4 xfce4-goodies mugshot parole network-manager-gnome papirus-icon-theme -y
-chroot debian-chroot apt-get install blueman gvfs-backends gnome-calculator inxi mintstick synaptic file-roller gdebi chromium chromium-l10n -y
-chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan -y
+chroot debian-chroot apt-get install xfce4 xfce4-terminal xfce4-whiskermenu-plugin xfce4-battery-plugin xfce4-power-manager xfce4-screenshooter thunar-archive-plugin -y 
+chroot debian-chroot apt-get install mousepad ristretto network-manager-gnome synaptic -y
+chroot debian-chroot apt-get install gvfs-backends gvfs-fuse inxi mintstick gnome-calculator wget file-roller stacer papirus-icon-theme -y
+chroot debian-chroot apt-get install firefox-esr firefox-esr-l10n-tr -y
+
+#Yazıcı ve tarayıcı paketleri
+#chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan blueman -y
 
 #Gereksiz paketleri silelim
 chroot debian-chroot apt-get remove xarchiver xterm -y
@@ -89,7 +93,7 @@ echo '    initrd /live/initrd.img' >> isowork/boot/grub/grub.cfg
 echo '}' >> isowork/boot/grub/grub.cfg
 
 echo "----------------İso oluşturuluyor..-----------------"
-grub-mkrescue isowork -o debian-live-$(date +%x).iso
+grub-mkrescue isowork -o debian-testing-live-$(date +%x).iso
 
 # Oluşturduğumuz isoyu bilgisayara kurmak için: sudo apt update && sudo apt install calamares-settings-debian -y
 # kurulum sonrası etc/apt/sources.list dosyasını kontrol edelim değişmiş ise: deb https://deb.debian.org/debian testing main contrib non-free
