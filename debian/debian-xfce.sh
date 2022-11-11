@@ -87,7 +87,7 @@ cp -pf debian-chroot/boot/vmlinuz* isowork/live/vmlinuz
 #iso taslağı oluşturma
 mkdir -p isowork/boot/grub/
 echo 'insmod all_video' > isowork/boot/grub/grub.cfg
-echo 'menuentry "Start Debian Unofficial 64-bit" --class debian {' >> isowork/boot/grub/grub.cfg
+echo 'menuentry "Start Debian Testing Unofficial 64-bit" --class debian {' >> isowork/boot/grub/grub.cfg
 echo '    linux /live/vmlinuz boot=live live-config live-media-path=/live --' >> isowork/boot/grub/grub.cfg
 echo '    initrd /live/initrd.img' >> isowork/boot/grub/grub.cfg
 echo '}' >> isowork/boot/grub/grub.cfg
