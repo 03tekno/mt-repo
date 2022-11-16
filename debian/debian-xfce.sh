@@ -55,13 +55,11 @@ chroot debian-chroot apt-get install firmware-realtek -y
 # chroot debian-chroot apt-get install firmware-zd1211 -y
 # chroot debian-chroot apt-get install hdmi2usb-fx2-firmware -y
   
-chroot debian-chroot apt-get install xfce4 xfce4-goodies parole network-manager-gnome papirus-icon-theme -y
-chroot debian-chroot apt-get install mousepad ristretto evince network-manager-gnome synaptic -y
-chroot debian-chroot apt-get install gvfs-backends gvfs-fuse inxi mintstick gnome-calculator wget file-roller stacer -y
-chroot debian-chroot apt-get install dde-calendar deepin-deb-installer firefox-esr firefox-esr-l10n-tr -y
+chroot debian-chroot apt-get install xfce4 xfce4-goodies network-manager-gnome file-roller synaptic gvfs-backends gvfs-fuse wget -y
+chroot debian-chroot apt-get install mintstick gnome-calculator stacer dde-calendar deepin-deb-installer papirus-icon-theme -y
 
 #Yazıcı ve tarayıcı paketleri
-chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan blueman -y
+#chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan blueman -y
 
 #Gereksiz paketleri silelim
 chroot debian-chroot apt-get remove xarchiver xterm -y
