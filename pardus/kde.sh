@@ -54,7 +54,7 @@ chroot kaynak apt-get install -y atmel-firmware bluez-firmware dahdi-firmware-no
 chroot kaynak apt-get install kde-standard -y
 
 ### İsteğe bağlı paketleri kuralım
-chroot kaynak apt-get install blueman gvfs-backends neofetch rar -y
+chroot kaynak apt-get install blueman gvfs-backends rar -y
 
 ### Pardus paketleri kuralım 
 chroot kaynak apt-get install pardus-common-desktop pardus-configure pardus-locales -y
@@ -66,6 +66,8 @@ chroot kaynak apt-get remove xterm icedtea-netx -y
 
 ### Zorunlu değil ama grub güncelleyelim
 chroot kaynak update-grub
+chroot kaynak apt upgrade -y
+chroot kaynak apt -t yirmibir-backports upgrade -y
 
 umount -lf -R kaynak/* 2>/dev/null
 
