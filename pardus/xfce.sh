@@ -51,7 +51,7 @@ chroot kaynak apt-get install -y atmel-firmware bluez-firmware dahdi-firmware-no
   firmware-sof-signed firmware-ti-connectivity firmware-zd1211 hdmi2usb-fx2-firmware
   
 ### Xfce için gerekli paketleri kuralım
-chroot kaynak apt-get install xfce4 xfce4-goodies mugshot network-manager-gnome -y
+chroot kaynak apt-get install xfce4 xfce4-goodies network-manager-gnome -y
 
 ### İsteğe bağlı paketleri kuralım
 chroot kaynak apt-get install blueman gvfs-backends neofetch gnome-calculator file-roller synaptic rar -y
