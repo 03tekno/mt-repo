@@ -58,8 +58,8 @@ chroot debian-chroot apt-get install firmware-realtek -y
 chroot debian-chroot apt-get install xfce4 xfce4-goodies network-manager-gnome file-roller synaptic gvfs-backends gvfs-fuse wget -y
 chroot debian-chroot apt-get install mintstick gnome-calculator stacer dde-calendar deepin-deb-installer papirus-icon-theme -y
 
-#Yazıcı ve tarayıcı paketleri
-#chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan blueman -y
+#Yazıcı ve tarayıcı ve bluetooth paketleri
+chroot debian-chroot apt-get install printer-driver-all system-config-printer simple-scan blueman -y
 
 #Gereksiz paketleri silelim
 chroot debian-chroot apt-get remove xarchiver xterm -y
