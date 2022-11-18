@@ -66,8 +66,6 @@ chroot kaynak apt-get remove xterm icedtea-netx -y
 
 ### Zorunlu değil ama grub güncelleyelim
 chroot kaynak update-grub
-chroot kaynak apt upgrade -y
-chroot kaynak apt -t yirmibir-backports upgrade -y
 
 umount -lf -R kaynak/* 2>/dev/null
 
