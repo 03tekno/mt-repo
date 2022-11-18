@@ -21,7 +21,7 @@ chroot debian-chroot apt-get install xorg xinit -y
 
 #Firmware paketlerini kuralım (Kurulmasını istemediğiniz firmware paketini silebilirsiniz.)
 # chroot debian-chroot apt-get install atmel-firmware -y
-# chroot debian-chroot apt-get install bluez-firmware -y
+chroot debian-chroot apt-get install bluez-firmware -y
 # chroot debian-chroot apt-get install dahdi-firmware-nonfree -y
 chroot debian-chroot apt-get install firmware-amd-graphics -y
 # chroot debian-chroot apt-get install firmware-ath9k-htc -y
