@@ -15,3 +15,6 @@ sudo apt install librewolf -y
 
 Depo eklemeden .deb dosyasını indirmek için: 
 https://deb.librewolf.net/pool/bullseye/main/libr/librewolf/
+
+Appimage dosyası için:
+https://librewolf.net/installation/linux/
