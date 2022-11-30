@@ -55,3 +55,11 @@ Geri tutuldu olarak işaretleme komutu. Kurulamaz, yükseltilemez, kaldırılama
 sudo apt-mark hold paket_adı
 İptal etmek için:
 sudo apt-mark unhold paket_adı
+
+Paketlerin bağımlılık sorunlarına ilişkin yada bozuk paketlerin oluştuğu durumlarda aşağıdaki komutlar kullanılır
+
+sudo apt update && sudo apt upgrade
+sudo apt clean && sudo apt autoremove
+sudo dpkg --configure -a
+sudo apt-get install -f
+sudo apt --fix-broken
