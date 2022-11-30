@@ -1,14 +1,15 @@
 TEMEL APT ve DPKG KOMUTLARI
 
-Paket kaynaklarını güncellemek için: 
-(Debian tabanlı sistemlerde ana kaynak deposu /etc/apt/sources.list dosyasında bulunur.)
+Paket kaynaklarını güncellemek için: (Debian tabanlı sistemlerde ana kaynak deposu /etc/apt/sources.list dosyasında bulunur.)
 sudo apt update 
 
 Paket listelerini güncellemek için: 
 sudo apt upgrade
 
 Sistemi tamamen güncellemek için:
-sudo apt-get dist-upgrade
+sudo apt full-upgrade yada sudo apt dist-upgrade
+
+Sistemi 
 
 Paket aramak için:
 apt search paket_adı
@@ -27,16 +28,13 @@ sudo apt install paket_adı
 sudo apt install paket1 paket2 paket3 
 
 Paketleri yerel bir dizinden kurmak için:
-sudo dpkg -i paket_adı.deb && sudo apt install -f
+sudo dpkg -i paket_adı.deb && sudo apt install -f yada sudo apt install ./paket_adı
 
 Site üzerinden paket kurmak için:
-wget https://site.com/depo/paket_adı.deb && sudo dpkg -i paket_adı.deb && sudo apt install -f
+wget https://site.com/depo/paket_adı.deb && sudo apt install ./paket_adı.deb
 
 Sisteminizde kurulu tüm paketleri görmek için:
 apt list --installed veya dpkg-query -l
-
-Bir paketi indirip kurmak istemiyorsak:
-sudo apt install paket_adı -d
 
 Bir paketi kaldırmak için:
 sudo apt remove paket_adı
