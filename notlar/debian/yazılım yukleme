@@ -4,7 +4,7 @@ Pardus işletim sistemine yazılım yüklemek için değişik yöntemler vardır
 sudo apt install ./paket_adı.deb
 
 2- YARDIMCI PROGRAMLAR İLE KURULUM
-Sağ tıklayıp Pardus .deb kurucusu ile yada Gdebi uygulaması ile kuruyoruz
+.deb dosyasına sağ tıklayıp Pardus Paket Kurucu yada Gdebi uygulaması ile kurabiliriz
 
 3- PARDUS MAĞAZADAN KURULUM
 İstediğiniz uygulamayı arayın yada kategoriden seçin Kur ve Kaldır yapmamız yeterli
