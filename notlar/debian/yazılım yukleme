@@ -1,9 +1,9 @@
 Pardus işletim sistemine yazılım yüklemek için değişik yöntemler vardır. Bunlara kısaca değinmek istedim.
 
-1- TERMİNAL İLE
-sudo apt install paket_adı
+1- TERMİNAL İLE KURULUM
+sudo apt install ./paket_adı.deb
 
-2- .DEB DOSYALAR İÇİN
+2- YARDIMCI PROGRAMLAR İLE KURULUM
 Sağ tıklayıp Pardus .deb kurucusu ile yada Gdebi uygulaması ile kuruyoruz
 
 3- PARDUS MAĞAZADAN KURULUM
