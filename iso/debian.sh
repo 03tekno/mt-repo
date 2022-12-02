@@ -74,7 +74,7 @@ cp -pf kaynak/boot/vmlinuz* isowork/live/vmlinuz
 ### grub işlemleri 
 mkdir -p isowork/boot/grub/
 echo 'insmod all_video' > isowork/boot/grub/grub.cfg
-echo 'menuentry "Start PARDUS Backports Unofficial 64-bit" --class debian {' >> isowork/boot/grub/grub.cfg
+echo 'menuentry "Start DEBIAN Unofficial 64-bit" --class debian {' >> isowork/boot/grub/grub.cfg
 echo '    linux /live/vmlinuz boot=live live-config live-media-path=/live --' >> isowork/boot/grub/grub.cfg
 echo '    initrd /live/initrd.img' >> isowork/boot/grub/grub.cfg
 echo '}' >> isowork/boot/grub/grub.cfg
