@@ -38,10 +38,10 @@ chroot kaynak apt-get install xorg xinit -y
 chroot kaynak apt-get install firmware-linux firmware-linux-free firmware-linux-nonfree firmware-misc-nonfree firmware-amd-graphics firmware-realtek bluez-firmware -y
 
 ### Xfce için gerekli paketleri kuralım
-chroot kaynak apt-get install xfce4 xfce4-goodies network-manager-gnome papirus-icon-themes -y
+chroot kaynak apt-get install xfce4 xfce4-goodies network-manager-gnome papirus-icon-theme -y
 
 ### İsteğe bağlı paketleri kuralım
-chroot kaynak apt-get install gvfs-backends inxi gnome-calculator file-roller synaptic rar -y
+chroot kaynak apt-get install gvfs-backends inxi mintstick deepin-deb-installer gnome-calculator file-roller synaptic rar -y
 
 ### Yazıcı tarayıcı ve bluetooth paketlerini kuralım (isteğe bağlı)
 chroot kaynak apt-get install printer-driver-all system-config-printer simple-scan blueman -y
