@@ -93,6 +93,7 @@ chroot kaynak apt-get remove xterm termit xarchiver icedtea-netx -y
 
 ### Zorunlu değil ama grub güncelleyelim
 chroot kaynak update-grub
+chroot kaynak apt-get upgrade -y
 
 umount -lf -R kaynak/* 2>/dev/null
 
