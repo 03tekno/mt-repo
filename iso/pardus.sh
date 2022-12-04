@@ -74,26 +74,25 @@ chroot kaynak apt-get install firmware-zd1211 -y
 chroot kaynak apt-get install hdmi2usb-fx2-firmware -y
 
 ### Xfce için gerekli paketleri kuralım
-chroot kaynak apt-get install xfce4 xfce4-goodies network-manager-gnome -y
+chroot kaynak apt-get install xfce4 xfce4-goodies network-manager-gnome blueman -y
 
 ### İsteğe bağlı paketleri kuralım
-chroot kaynak apt-get install gvfs-backends inxi gnome-calculator file-roller synaptic rar -y
+chroot kaynak apt-get install gvfs-backends inxi gnome-calculator file-roller synaptic librewolf -y
 
 ### Pardus paketleri kuralım 
-chroot kaynak apt-get install pardus-common-desktop pardus-configure pardus-xfce-settings pardus-locales pardus-installer -y
-chroot kaynak apt-get install pardus-package-installer pardus-software -y
-chroot kaynak apt-get install pardus-dolunay-grub-theme pardus-gtk-theme pardus-icon-theme pardus-backgrounds pardus-about -y
+chroot kaynak apt-get install pardus-xfce-settings pardus-locales -y
+chroot kaynak apt-get install pardus-package-installer pardus-software pardus-installer pardus-about -y
+chroot kaynak apt-get install pardus-dolunay-grub-theme pardus-gtk-theme pardus-icon-theme -y
 
 ### Yazıcı tarayıcı ve bluetooth paketlerini kuralım (isteğe bağlı)
-chroot kaynak apt-get install printer-driver-all system-config-printer simple-scan blueman -y
+chroot kaynak apt-get install printer-driver-all system-config-printer simple-scan -y
+
 
 ### zorunlu kurulu gelen paketleri silelim (isteğe bağlı)
 chroot kaynak apt-get remove xterm termit xarchiver icedtea-netx -y
 
 ### Zorunlu değil ama grub güncelleyelim
 chroot kaynak update-grub
-chroot kaynak apt upgrade -y
-chroot kaynak apt -t yirmibir-backports upgrade -y
 
 umount -lf -R kaynak/* 2>/dev/null
 
