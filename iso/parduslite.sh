@@ -38,7 +38,7 @@ chroot kaynak apt-get install live-config live-boot -y
 chroot kaynak apt-get install xorg xinit -y
 
 ### giriş ekranı kuralım
-chroot kaynak apt-get install lightdm lightdm-gtk-greeter -y
+chroot kaynak apt-get install lightdm -y
 
 ### firmware paketleri için (Burada kendi donanımınıza göre tercih yapabilirsiniz!) 
 chroot kaynak apt-get install firmware-linux -y
