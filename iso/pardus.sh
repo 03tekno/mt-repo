@@ -37,51 +37,58 @@ chroot kaynak apt-get install live-config live-boot -y
 ### init paketleri için
 chroot kaynak apt-get install xorg xinit -y
 
+### giriş ekranı kuralım
+chroot kaynak apt-get install lightdm lightdm-gtk-greeter -y
+
 ### firmware paketleri için (Burada kendi donanımınıza göre tercih yapabilirsiniz!) 
 chroot kaynak apt-get install firmware-linux -y
 chroot kaynak apt-get install firmware-linux-free -y
 chroot kaynak apt-get install firmware-linux-nonfree -y
-chroot kaynak apt-get install firmware-amd-graphics -y
-chroot kaynak apt-get install atmel-firmware -y
-chroot kaynak apt-get install bluez-firmware -y
-chroot kaynak apt-get install dahdi-firmware-nonfree -y
-chroot kaynak apt-get install firmware-ath9k-htc -y
-chroot kaynak apt-get install firmware-atheros -y
-chroot kaynak apt-get install firmware-b43-installer -y
-chroot kaynak apt-get install firmware-b43legacy-installer -y
-chroot kaynak apt-get install firmware-bnx2 -y
-chroot kaynak apt-get install firmware-bnx2x -y
-chroot kaynak apt-get install firmware-brcm80211 -y
-chroot kaynak apt-get install firmware-cavium -y
-chroot kaynak apt-get install firmware-intel-sound -y
-chroot kaynak apt-get install firmware-intelwimax -y
-chroot kaynak apt-get install firmware-ipw2x00 -y
-chroot kaynak apt-get install firmware-ivtv -y
-chroot kaynak apt-get install firmware-iwlwifi -y
-chroot kaynak apt-get install firmware-libertas -y
 chroot kaynak apt-get install firmware-misc-nonfree -y
-chroot kaynak apt-get install firmware-myricom -y
-chroot kaynak apt-get install firmware-netronome -y
-chroot kaynak apt-get install firmware-netxen -y
-chroot kaynak apt-get install firmware-qcom-soc -y
-chroot kaynak apt-get install firmware-qlogic -y
+chroot kaynak apt-get install firmware-amd-graphics -y
 chroot kaynak apt-get install firmware-realtek -y
-chroot kaynak apt-get install firmware-samsung -y
-chroot kaynak apt-get install firmware-siano -y
-chroot kaynak apt-get install firmware-sof-signed -y
-chroot kaynak apt-get install firmware-ti-connectivity -y
-chroot kaynak apt-get install firmware-zd1211 -y
+chroot kaynak apt-get install bluez-firmware -y
 chroot kaynak apt-get install hdmi2usb-fx2-firmware -y
 
-### Xfce için gerekli paketleri kuralım
-chroot kaynak apt-get install xfce4 xfce4-goodies network-manager-gnome blueman -y
+### benim laptopda bunlar fazlalık! :)
+#chroot kaynak apt-get install atmel-firmware -y
+#chroot kaynak apt-get install dahdi-firmware-nonfree -y
+#chroot kaynak apt-get install firmware-ath9k-htc -y
+#chroot kaynak apt-get install firmware-atheros -y
+#chroot kaynak apt-get install firmware-b43-installer -y
+#chroot kaynak apt-get install firmware-b43legacy-installer -y
+#chroot kaynak apt-get install firmware-bnx2 -y
+#chroot kaynak apt-get install firmware-bnx2x -y
+#chroot kaynak apt-get install firmware-brcm80211 -y
+#chroot kaynak apt-get install firmware-cavium -y
+#chroot kaynak apt-get install firmware-intel-sound -y
+#chroot kaynak apt-get install firmware-intelwimax -y
+#chroot kaynak apt-get install firmware-ipw2x00 -y
+#chroot kaynak apt-get install firmware-ivtv -y
+#chroot kaynak apt-get install firmware-iwlwifi -y
+#chroot kaynak apt-get install firmware-libertas -y
+#chroot kaynak apt-get install firmware-myricom -y
+#chroot kaynak apt-get install firmware-netronome -y
+#chroot kaynak apt-get install firmware-netxen -y
+#chroot kaynak apt-get install firmware-qcom-soc -y
+#chroot kaynak apt-get install firmware-qlogic -y
+#chroot kaynak apt-get install firmware-samsung -y
+#chroot kaynak apt-get install firmware-siano -y
+#chroot kaynak apt-get install firmware-sof-signed -y
+#chroot kaynak apt-get install firmware-ti-connectivity -y
+#chroot kaynak apt-get install firmware-zd1211 -y
+
+
+### Xfce ve gerekli araçları kuralım
+chroot kaynak apt-get install xfce4 xfce4-terminal xfce4-whiskermenu-plugin xfce4-battery-plugin xfce4-power-manager xfce4-screenshooter thunar-archive-plugin mousepad ristretto -y
+chroot kaynak apt-get install network-manager-gnome gvfs-backends blueman -y
 
 ### İsteğe bağlı paketleri kuralım
-chroot kaynak apt-get install gvfs-backends inxi gnome-calculator file-roller synaptic librewolf -y
+chroot kaynak apt-get install inxi gnome-calculator file-roller synaptic librewolf -y
 
 ### Pardus paketleri kuralım 
-chroot kaynak apt-get install pardus-xfce-settings pardus-locales -y
-chroot kaynak apt-get install pardus-package-installer pardus-software pardus-installer pardus-about -y
+chroot kaynak apt-get install pardus-xfce-settings pardus-locales pardus-software -y
+chroot kaynak apt-get install pardus-package-installer pardus-installer pardus-about -y
 chroot kaynak apt-get install pardus-dolunay-grub-theme pardus-gtk-theme pardus-icon-theme -y
 
 ### Yazıcı tarayıcı ve bluetooth paketlerini kuralım (isteğe bağlı)
