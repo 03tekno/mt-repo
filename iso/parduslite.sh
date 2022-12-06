@@ -80,7 +80,8 @@ chroot kaynak apt-get install hdmi2usb-fx2-firmware -y
 
 
 ### Xfce ve gerekli araçları kuralım
-chroot kaynak apt-get install xfce4 xfce4-terminal thunar xfce4-whiskermenu-plugin xfce4-battery-plugin xfce4-power-manager xfce4-screenshooter thunar-archive-plugin mousepad ristretto -y
+chroot kaynak apt-get install xfce4 xfce4-terminal xfce4-whiskermenu-plugin thunar thunar-archive-plugin xfce4-screenshooter mousepad ristretto -y
+chroot kaynak apt-get install xfce4-datetime-plugin xfce4-timer-plugin xfce4-mount-plugin xfce4-taskmanager xfce4-battery-plugin xfce4-power-manager -y
 chroot kaynak apt-get install network-manager-gnome gvfs-backends blueman qmplay2 -y
 
 ### İsteğe bağlı paketleri kuralım
