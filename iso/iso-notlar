@@ -1,0 +1,4 @@
+Skel içine atılacak gizli dosyaların Ctrl+H yapmadan alınması
+örnek:
+mt@muslim:~$ mkdir cinnamon
+mt@muslim:~$ cp /home/mt/.cinnamon/* -r /home/mt/cinnamon
