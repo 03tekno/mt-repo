@@ -7,7 +7,7 @@ Apprepo diye dizin oluşturup içine istediğimiz kadar AppImage dosyası atalı
 chmod +x /Apprepo/*.AppImage komutu vermemiz yeterlidir.
 
 AppImage çalıştırma:
-./paket_name.AppImage
+./paket_adı.AppImage
 
 
 Daha pratik olarak: 
