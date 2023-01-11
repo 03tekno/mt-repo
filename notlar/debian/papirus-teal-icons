@@ -1,0 +1,6 @@
+##Papirus link: https://www.gnome-look.org/p/1166289/
+
+cd /tmp
+wget https://github.com/mobilturka/mt-repo/raw/main/deb/papirus-teal-icons.tar.xz 
+sudo tar -xvf papirus-teal-icons.tar.xz -C /usr/share/icons
+update-icon-caches /usr/share/icons/*
