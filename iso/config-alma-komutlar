@@ -1,8 +1,8 @@
 SKEL dizini içine atılacak dosyaların Ctrl+H yapmadan alınması
 
-CINNOMON için:
+Cinnamon için:
 muslim@muslim:~$ mkdir cinnamon && cp /home/muslim/.cinnamon/* -r /home/muslim/cinnamon
 muslim@muslim:~$ mkdir config && cp /home/muslim/.config/* -r /home/muslim/config
 
-XFCE için:
+Xfce için:
 muslim@muslim:~$ mkdir xfce && cp /home/muslim/.config/* -r /home/muslim/xfce
