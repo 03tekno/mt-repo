@@ -1,0 +1,27 @@
+Debian .deb yeniden paketleme işlemleri
+
+sudo apt install build-essential
+sudo apt install devscripts
+
+.deb paketinin adını paket.deb olarak değiştir!
+
+$ ar x paket.deb
+$ ls
+-> control.tar.xz  data.tar.xz  debian-binary  paket.deb
+$ tar -xf data.tar.xz && rm -f data.tar.xz debian-binary paket.deb
+$ mkdir DEBIAN
+$ mv control.tar.xz DEBIAN
+$ cd DEBIAN
+$ tar -xf control.tar.xz && rm -f control.tar.xz
+$ cd ..
+$ ls
+-> DEBIAN/ usr/ etc/
+
+Control dosyasını düzenle ve gerekli değişiklikleri yap
+/home/mt de ukui-muslim-greeter dizini oluştur
+
+şimdi paketleme zamanı :)
+/home/mt de terminal aç ve aşağıdaki komutu gir
+
+$ dpkg -b /home/mt/ukui-muslim-greeter/
+
