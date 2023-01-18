@@ -3,7 +3,11 @@ Debian .deb yeniden paketleme işlemleri (Tüm işlemler rootsuz)
 sudo apt install build-essential
 sudo apt install devscripts
 
-.deb paketinin adını paket.deb olarak değiştir!
+İşlemleri masaüstünde ve rootsuz yapacağım
+
+1- Öncelikle indirdiğimiz .deb paketin adını "paket.deb" olarak değiştir!
+
+2- Aşağıdaki komuları kopyalayıp terminale yapıştıralım
 
 ar x paket.deb
 tar -xf data.tar.xz && rm -f data.tar.xz debian-binary paket.deb
@@ -13,7 +17,10 @@ cd DEBIAN
 tar -xf control.tar.xz && rm -f control.tar.xz
 cd ..
 
-Control dosyasını düzenle ve gerekli değişiklikleri yap
+3- Control dosyasını düzenle ve gerekli değişiklikleri yap 
 
-şimdi paketleme zamanı :)
-dpkg -b /home/mt/ukui-muslim-greeter
+4- desktop-base dizin oluştur. DEBIAN etc usr ne varsa desktop-base içine at.
+
+5- desktop-base dizini dışında terminale aşağıdaki komutu giriyoruz ve artık desktop-base.deb paketimiz hazır :)
+
+dpkg -b /home/mt/Masaüstü
