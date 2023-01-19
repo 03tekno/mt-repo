@@ -1,7 +1,0 @@
-mint-meta-cinnamon baobab blueberry cinnamon cinnamon-common cinnamon-control-center cinnamon-desktop-data cinnamon-screensaver cinnamon-settings-daemon 
-file-roller firefox gcr gdebi geoclue-2.0 gimp gnome-bluetooth gnome-calculator gnome-calendar gnome-disk-utility gnome-font-viewer gnome-logs gnome-power-manager 
-gnome-screenshot gnome-system-monitor gnome-terminal gparted gucharmap gufw hexchat im-config libreoffice-base libreoffice-calc libreoffice-common libreoffice-draw 
-libreoffice-impress libreoffice-math libreoffice-writer lightdm-settings mint-artwork mintbackup mintdrivers mintinstall mintlocale mintreport mintsources 
-mintstick mintupdate mintwelcome muffin nemo network-manager-gnome onboard openjdk-11-jre pix printer-driver-foo2zjs-common python2.7 python3.6 qt5ct 
-redshift redshift-gtk rhythmbox seahorse simple-scan synaptic system-config-printer thunderbird timeshift tomboy transmission-gtk ubiquity-frontend-gtk 
-ubuntu-system-adjustments vim-common xdg-desktop-portal-gtk xed xplayer xreader xviewer yelp
