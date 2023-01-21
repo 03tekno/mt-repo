@@ -23,4 +23,4 @@ cd ..
 
 5- desktop-base dizini dışında terminale aşağıdaki komutu giriyoruz ve artık desktop-base.deb paketimiz hazır :)
 
-dpkg -b /home/mt/Masaüstü
+dpkg -b /home/mt/Masaüstü/desktop-base
