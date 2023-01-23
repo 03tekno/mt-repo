@@ -1,10 +1,4 @@
 1- Projeye gir
-2- Tag oluştur (latest veya currnet)
-3- Settinge tıkla ve sol menüdeki Actions General ayarlarına git
-4- Workflow permissions kısmını Read and write permissions olarak değiştirip Save tıkla
-5- Üst menüdeki Actions kısmına tıkla ve CI kısmında Run workflow tıkla
-
-Önemli Not: .github/workflow içindeki makefile.yml dosyasında; 
-branches: [ main ]
-automatic_release_tag: "current"
-bunlar oluşturacağımız tag ve branch ile aynı olmalıdır.
+2- Settinge tıkla ve sol menüdeki Actions General ayarlarına git
+3- Workflow permissions kısmını Read and write permissions olarak değiştirip Save tıkla
+4- Üst menüdeki Actions kısmına tıkla ve CI kısmında Run workflow tıkla
