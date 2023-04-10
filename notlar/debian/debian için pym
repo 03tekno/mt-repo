@@ -1,0 +1,11 @@
+# Debian sistemimize Pardus Yazılım Merkezini kuralım 
+
+wget https://depo.pardus.org.tr/pardus/pool/main/p/pardus-archive-keyring/pardus-archive-keyring_2021.1_all.deb
+sudo apt install ./pardus-archive-keyring_2021.1_all.deb -y
+echo 'deb https://depo.pardus.org.tr/pardus yirmibir main non-free contrib' | sudo tee /etc/apt/sources.list.d/pardus.list
+echo 'deb https://depo.pardus.org.tr/backports yirmibir-backports main contrib non-free' | sudo tee /etc/apt/sources.list.d/yirmibir-backports.list
+sudo apt update 
+sudo apt install pardus-software -y
+
+
+
