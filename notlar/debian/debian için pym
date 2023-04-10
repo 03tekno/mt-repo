@@ -9,3 +9,9 @@ sudo apt install pardus-software -y
 
 
 
+# Debian sistemimize Linux Mint depoyu da ekleyelim :)
+
+wget http://packages.linuxmint.com/pool/main/l/linuxmint-keyring/linuxmint-keyring_2022.06.21_all.deb
+sudo apt install ./linuxmint-keyring_2022.06.21_all.deb -y
+echo 'deb http://packages.linuxmint.com elsie main upstream import backport' | sudo tee /etc/apt/sources.list.d/linuxmint.list
+sudo apt update
