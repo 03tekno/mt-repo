@@ -1,26 +1,22 @@
-Debian .deb yeniden paketleme işlemleri (Tüm işlemler rootsuz)
+sudo apt install build-essential wget
 
-sudo apt install build-essential
-sudo apt install devscripts
+.deb parçalama işlemi
 
-İşlemleri masaüstünde ve rootsuz yapacağım
-
-1- Öncelikle indirdiğimiz .deb paketin adını "paket.deb" olarak değiştir!
-
-2- Aşağıdaki komuları kopyalayıp terminale yapıştıralım
-
-ar x paket.deb
-tar -xf data.tar.xz && rm -f data.tar.xz debian-binary paket.deb
+```
+mkdir papirus-teal-icon-theme
+cd papirus-teal-icon-theme
+wget http://ftp.debian.org/debian/pool/main/p/papirus-icon-theme/papirus-icon-theme_20230301-1~exp1_all.deb
+ar x *.deb
+tar -xf data.tar.xz
+rm -f data.tar.xz debian-binary *.deb
 mkdir DEBIAN
 mv control.tar.xz DEBIAN
 cd DEBIAN
 tar -xf control.tar.xz && rm -f control.tar.xz
 cd ..
+```
 
-3- Control dosyasını düzenle ve gerekli değişiklikleri yap 
-
-4- desktop-base dizin oluştur. DEBIAN etc usr ne varsa desktop-base içine at.
-
-5- desktop-base dizini dışında terminale aşağıdaki komutu giriyoruz ve artık desktop-base.deb paketimiz hazır :)
-
-dpkg -b /home/mt/Masaüstü/desktop-base
+Gerekli düzenlememizi yapıldıktan sonra yeni .deb paketimizi alalım 
+```
+dpkg -b $HOME/papirus-teal-icon-theme
+```
