@@ -1,8 +1,8 @@
 Papirus paketini teal ile değiştirmek
+
 sudo apt install build-essential wget
 
 .deb parçalama işlemi
-
 
 mkdir papirus-teal-icon-theme
 cd papirus-teal-icon-theme
@@ -15,7 +15,6 @@ mv control.tar.xz DEBIAN
 cd DEBIAN
 tar -xf control.tar.xz && rm -f control.tar.xz
 cd ..
-
 
 Gerekli düzenlememizi yapıldıktan sonra yeni .deb paketimizi alalım 
 
