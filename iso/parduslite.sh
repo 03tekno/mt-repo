@@ -11,7 +11,7 @@ mkdir kaynak
 chown root kaynak
 
 ### pardus için
-debootstrap --arch=amd64 yirmibir kaynak http://depo.pardus.org.tr/pardus
+debootstrap --arch=amd64 yirmibir kaynak https://depo.pardus.org.tr/pardus
 
 ### bind bağı için
 for i in dev dev/pts proc sys; do mount -o bind /$i kaynak/$i; done
