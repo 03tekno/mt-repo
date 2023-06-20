@@ -8,13 +8,13 @@ Librewolf de deney, reklam yazılımı, can sıkıntısı veya gereksiz dikkat d
 Ublock origin eklenmiş olarak geldiğinden internet siteleri yada YouTube da reklamsız video izlemenize olanak tanır.
 
 Librewolf nasıl kurulur?
-echo "deb http://deb.librewolf.net bullseye main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+echo "deb http://deb.librewolf.net bookworm main" | sudo tee /etc/apt/sources.list.d/librewolf.list
 sudo wget https://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg && sudo apt update
 sudo apt install librewolf -y
 
 
 Depo eklemeden .deb dosyasını indirmek için: 
-https://deb.librewolf.net/pool/bullseye/main/libr/librewolf/
+https://deb.librewolf.net/pool/bookworm/main/libr/librewolf/
 
 Appimage dosyası için:
 
