@@ -1,5 +1,5 @@
 
-DEBIAN 11 BULLSEYE-BACKPORTS DEPO EKLEME VE KERNEL GÜNCELLEME İŞLEMİ
+DEBIAN 12 BULLSEYE-BACKPORTS DEPO EKLEME VE KERNEL GÜNCELLEME İŞLEMİ
 --------------------------------------------------------------------
 Depoyu eklemek için:
 echo 'deb http://deb.debian.org/debian bookworm-backports main contrib non-free non-free-firmware' | sudo tee /etc/apt/sources.list.d/backports.list && sudo apt update
@@ -14,7 +14,7 @@ Paket kurmak için ise: (Örnek: Telegram kuralım)
 sudo apt install -t bookworm-backports telegram-desktop
 
 
-PARDUS 21 YİRMİBİR-BACKPORTS DEPO EKLEME VE KERNEL GÜNCELLEME İŞLEMİ
+PARDUS 23 YİRMİBİR-BACKPORTS DEPO EKLEME VE KERNEL GÜNCELLEME İŞLEMİ
 --------------------------------------------------------------------
 Depoyu eklemek için:
 echo 'deb http://depo.pardus.org.tr/backports yirmiuc-backports main contrib non-free non-free-firmware ' | sudo tee /etc/apt/sources.list.d/yirmiuc-backports.list && sudo apt update
