@@ -1,4 +1,5 @@
 #EXTM3U
+
 #EXTINF:-1 tvg-id="Agro TV" tvg-name="Agro TV" tvg-language="Turkish"
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0
 #https://yayin30.haber100.com/live/agrotv/playlist.m3u8
