@@ -2,8 +2,17 @@ Turkman Linux Notlarım
 
 ymp repo --update --ignore-gpg
 
-su
+
+papirus kurulumu
+https://www.gnome-look.org/p/1166289/
+download dan papirus-icon-theme.tar.gz indir
+su komutu ile root ol
+tar -xvf .tar.gz -C /usr/share/icons
+
+
+
+debianda
 cd /tmp
 wget https://github.com/03tekno/debhane/raw/main/papirus-icon-theme-20240201.tar.xz
-tar -xvf 20240201.tar.gz -C /usr/share/icons
+tar -xvf .tar.gz -C /usr/share/icons
 update-icon-caches /usr/share/icons/*
