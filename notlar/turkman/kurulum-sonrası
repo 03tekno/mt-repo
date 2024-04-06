@@ -6,8 +6,10 @@ ymp repo --update --ignore-gpg
 papirus kurulumu
 https://www.gnome-look.org/p/1166289/
 download dan papirus-icon-theme.tar.gz indir
+
+cd Download ile dizine gir
 su komutu ile root ol
-tar -xvf .tar.gz -C /usr/share/icons
+tar -xvf papirus-*.tar.gz -C /usr/share/icons
 
 
 
