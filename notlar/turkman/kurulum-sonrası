@@ -1,1 +1,9 @@
 Turkman Linux Notlarım
+
+ymp repo --update --ignore-gpg
+
+su
+cd /tmp
+wget https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/20240201.tar.gz
+tar -xvf 20240201.tar.gz -C /usr/share/icons
+update-icon-caches /usr/share/icons/*
