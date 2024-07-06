@@ -1,4 +1,4 @@
-UYARI: Bu makalede Amd işlemcili Cpu ve Gpu paketlerinin (Özellikle Ryzen 4000 ve 5000 seriler) testing depodan güncelleme işlemi yapılacaktır. 
+UYARI: Bu makalede Amd işlemcili Cpu ve Gpu paketlerinin (Özellikle Ryzen 4.5.6.7.. seriler) testing depodan güncelleme işlemi yapılacaktır. 
 Debian testing depodan güncellenen paketlerin de kararsız veya hatalı olabileceği hatta veri kaybına bile sebep olabileceği durumlar olmaktadır.
 
 DEBIAN TESTING KERNEL GÜNCELLEME İŞLEMİ:
