@@ -13,7 +13,7 @@ MESA VE DRM PAKETLERİ GÜNCELLEME:
 sudo apt install -t testing '?upgradable ?source-package("mesa|libdrm")'
 
 TESTİNG DEPOYU PASİF ETMEK İÇİN:
-echo '#deb https://deb.debian.org/debian testing main contrib non-free' | sudo tee /etc/apt/sources.list.d/testing.list && sudo apt update
+echo '#deb https://deb.debian.org/debian testing main contrib non-free non-free-firmware' | sudo tee /etc/apt/sources.list.d/testing.list && sudo apt update
 
 TESTİNG DEPOYU SİLMEK İÇİN:
 sudo rm /etc/apt/sources.list.d/testing.list && sudo apt update
