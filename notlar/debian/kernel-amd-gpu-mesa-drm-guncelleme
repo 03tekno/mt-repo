@@ -2,7 +2,7 @@ UYARI: Bu makalede Amd işlemcili Cpu ve Gpu paketlerinin (Özellikle Ryzen 4000
 Debian testing depodan güncellenen paketlerin de kararsız veya hatalı olabileceği hatta veri kaybına bile sebep olabileceği durumlar olmaktadır.
 
 DEBIAN TESTING KERNEL GÜNCELLEME İŞLEMİ:
-echo 'deb https://deb.debian.org/debian testing main contrib non-free' | sudo tee /etc/apt/sources.list.d/testing.list && sudo apt update
+echo 'deb https://deb.debian.org/debian testing main contrib non-free non-free-firmware' | sudo tee /etc/apt/sources.list.d/testing.list && sudo apt update
 sudo apt install -t testing linux-image-amd64
 sudo apt install -t testing linux-headers-amd64 (isteğe bağlı)
 
