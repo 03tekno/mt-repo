@@ -1,0 +1,27 @@
+Turkman Linux AppImage nasıl çalıştırılır?
+
+AppImage için aşağıdaki aşamaları terminale girelim. 
+
+1- Root olalım
+2- ymp install fuse - (Eğer libfuse2 gerektiren bir uygulama çalıştıracaksanız şunu da yüklemelisiniz. fuse2)
+3- rc-update add fuse
+4- rc-service fuse start
+5- modprobe fus
+6- mount -t fusectl none /sys/fs/fuse/connections
+7- chmod u+s /usr/bin/fusermount
+
+AppImage için izin verelim 
+chmod +x file_name.AppImage
+
+Çalıştırmak için
+çift tıkla yada ./file_name.AppImage
+
+
+Örnek Desktop Entry dosya yapımı:
+
+[Desktop Entry]
+Name=QMPlay2
+Exec=/path/to/qmplay2.AppImage
+Icon=QMPlay2
+Type=Application
+Categories=GTK;GNOME;Utility;
