@@ -24,4 +24,5 @@ Name=QMPlay2
 Exec=/path/to/qmplay2.AppImage
 Icon=QMPlay2
 Type=Application
-Categories=GTK;GNOME;Utility;
+Terminal=false
+Categories=AudioVideo;Audio;Video;Network;
