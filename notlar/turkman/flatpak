@@ -28,6 +28,21 @@ flatpak update package_name
 Tüm paketler için:
 flatpak update
 
+Flatpak paket arama:
+flatpak search paket_ismi
+
+Paketleri listeleme:
+flatpak list
+
+Kullanılmayan eklentileri kaldırma:
+flatpak uninstall -unused
+
+Bozuk paketleri onarma:
+flatpak repair
+
+Flatpak kurulduğundan bu yana yapılan değişiklikleri görme:
+flatpak history
+
 Fleatseal kurarak flatpak uygulamalarımızın izinlerini yönetelim:
 flatpak install flathub com.github.tchx84.Flatseal
 (Flatseal, Flatpak uygulamalarınızdaki izinleri gözden geçirmek ve değiştirmek için kullanılan grafiksel bir yardımcı programdır.)
