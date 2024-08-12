@@ -1,0 +1,27 @@
+Turkman Linux Flatpak kurulumu ve kullanımı:
+
+Root olalım ve flatpak kuralım:
+su
+ymp install flatpak
+
+Servisleri açalım:
+rc-update add devfs
+rc-update add fuse fuse2
+rc-update add hostname
+
+Flatpak depo ekleyelim:
+flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Bilgisayarı yeniden başlatalım:
+reboot
+
+Flathub sitesine giriş yapalım ve kurmak istedimizin uygulamanın bağlantısını kopyalayıp (rootsuz) terminale yazılım:
+Örnek flatpak uygulama kurulumu: 
+flatpak install flathub org.gimp.GIMP
+
+Kurulu olan bir flatpak uygulamasını kaldırma:
+flatpak uninstall flathub org.gimp.GIMP
+
+Fleatseal kurarak flatpak uygulamalarımızın izinlerini yönetelim:
+flatpak install flathub com.github.tchx84.Flatseal
+(Flatseal, Flatpak uygulamalarınızdaki izinleri gözden geçirmek ve değiştirmek için kullanılan grafiksel bir yardımcı programdır.)
