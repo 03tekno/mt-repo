@@ -25,4 +25,4 @@ Exec=/path/to/qmplay2.AppImage
 Icon=QMPlay2
 Type=Application
 Terminal=false
-Categories=AudioVideo;Audio;Video;Network;
+Categories=AudioVideo;Audio;Video;
