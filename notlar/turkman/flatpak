@@ -22,6 +22,9 @@ flatpak install flathub org.gimp.GIMP
 Kurulu olan bir flatpak uygulamasını kaldırma:
 flatpak uninstall flathub org.gimp.GIMP
 
+Flatpak paketleri güncelleme:
+flatpak update
+
 Fleatseal kurarak flatpak uygulamalarımızın izinlerini yönetelim:
 flatpak install flathub com.github.tchx84.Flatseal
 (Flatseal, Flatpak uygulamalarınızdaki izinleri gözden geçirmek ve değiştirmek için kullanılan grafiksel bir yardımcı programdır.)
