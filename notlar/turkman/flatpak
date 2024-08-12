@@ -23,6 +23,9 @@ Kurulu olan bir flatpak uygulamasını kaldırma:
 flatpak uninstall flathub org.gimp.GIMP
 
 Flatpak paketleri güncelleme:
+Tek paket için:
+flatpak update package_name
+Tüm paketler için:
 flatpak update
 
 Fleatseal kurarak flatpak uygulamalarımızın izinlerini yönetelim:
