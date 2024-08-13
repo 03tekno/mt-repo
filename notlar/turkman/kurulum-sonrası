@@ -6,8 +6,8 @@ ymp repo --update --ignore-gpg
 Depodan paket kurmak için:
 it veya install komutu kullanılır
 
-ymp install xarchiver (Kaynak kaddan kurulum için)
-ymp install xarchiver --ignore-gpg (Depodan ymp paketi kurmak için)
+ymp install xarchiver (Kaynak koddan paket kurulum için)
+ymp install xarchiver --ignore-gpg (Depodan derlenmiş ymp paketi kurmak için)
 
 Kurulu paketi kaldırmak için:
 rm veya remove komutu kullanılır
