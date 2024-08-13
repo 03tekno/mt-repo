@@ -3,7 +3,7 @@ Turkman Linux AppImage nasıl çalıştırılır?
 AppImage için aşağıdaki aşamaları terminale girelim. 
 
 1- Root olalım
-2- ymp install fuse - (Eğer libfuse2 gerektiren bir uygulama çalıştıracaksanız şunu da yüklemelisiniz. fuse2)
+2- ymp install fuse fuse2 - (Eğer libfuse2 gerektiren bir uygulama çalıştıracaksanız fuse2 gereklidir!)
 3- rc-update add fuse
 4- rc-service fuse start
 5- modprobe fuse
