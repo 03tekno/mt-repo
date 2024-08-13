@@ -16,7 +16,9 @@ flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/fl
 Bilgisayarı yeniden başlatalım:
 reboot
 
-Flathub sitesine giriş yapalım ve kurmak istedimizin uygulamanın bağlantısını kopyalayıp (rootsuz) terminale yazılım:
+Önemli Not: Flatpak paketlerinin kurulumu, kaldırılması yada güncellenmesi rootsuz yapılır!
+
+https://flathub.org/ sitesine giriş yapıp kurmak istediğimiz uygulamanın manuel install komutunu kopyalayıp terminale yazılım:
 Örnek flatpak uygulama kurulumu: 
 flatpak install flathub org.gimp.GIMP
 
@@ -34,9 +36,6 @@ flatpak search paket_ismi
 
 Paketleri listeleme:
 flatpak list
-
-Kullanılmayan eklentileri kaldırma:
-flatpak uninstall -unused
 
 Bozuk paketleri onarma:
 flatpak repair
