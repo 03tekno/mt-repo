@@ -10,7 +10,7 @@ rc-update add devfs
 rc-update add fuse
 rc-update add hostname
 
-Flatpak depo ekleyelim:
+Flatpak depo ekleyelim: (rootsuz)
 flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 Bilgisayarı yeniden başlatalım:
