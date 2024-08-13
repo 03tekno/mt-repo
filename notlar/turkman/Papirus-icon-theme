@@ -1,0 +1,7 @@
+Turkman Linux papirus-icon-theme kurulumu:
+
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="$HOME/.icons" sh
+
+Sistemden kaldırmak için:
+wget -qO- https://git.io/papirus-icon-theme-uninstall | sh
