@@ -7,7 +7,7 @@ ymp install flatpak
 
 Servisleri açalım:
 rc-update add devfs
-rc-update add fuse fuse2
+rc-update add fuse
 rc-update add hostname
 
 Flatpak depo ekleyelim:
