@@ -2,6 +2,7 @@ Turkman Linux Flatpak kurulumu ve kullanımı:
 
 Root olalım ve flatpak kuralım:
 su
+ymp install build-base --no-emerge
 ymp install flatpak
 
 Servisleri açalım:
