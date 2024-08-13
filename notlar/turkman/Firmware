@@ -1,0 +1,8 @@
+Turkman Linux Enduser Edition ISO ile linux-firmware paketi kurulu gelmektedir.
+mkfw -u komutu ile varsa firmwareleri güncelleyebiliriz
+
+Firmware kurulumu: 
+root olup mkfw -i komutu ile en güncel firmware paketini kurmak mümkündür. 
+
+(Makefile:31: install) Error 1 hatası verirse 
+ln -s true /bin/rdfind komutunu girip tekrar mkfw -i komutunu çalıştıralım. 
