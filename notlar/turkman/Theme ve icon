@@ -1,0 +1,28 @@
+Turkman Linux için tema ve icon paketleri:
+
+Tema paketleri: 
+
+Orchis-gtk-theme
+https://github.com/vinceliuice/Orchis-theme
+
+
+
+Icon Paketleri:
+
+Mint-y-icon
+https://github.com/linuxmint/mint-y-icons
+
+Fluent-icon-themes
+https://github.com/vinceliuice/Fluent-icon-theme
+https://github.com/luisrguerra/fluent11-icon-theme
+
+Tela-icon-theme
+https://github.com/vinceliuice/Tela-icon-theme
+
+Papirus-icon-theme
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="$HOME/.icons" sh
+
+Sistemden kaldırmak için:
+wget -qO- https://git.io/papirus-icon-theme-uninstall | sh
+
