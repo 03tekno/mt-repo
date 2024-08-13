@@ -1,7 +1,8 @@
 Turkman Linux Notlarım:
 
 Turkman kurulum sonrası terminalden depoyu güncelleyelim.
-ymp repo --update --ignore-gpg
+ymp repo --update --ignore-gpg (apt update komutu gibi)
+ymp install --upgrade (apt upgrade komutu gibi)
 
 Depodan paket kurmak için:
 it veya install komutu kullanılır
