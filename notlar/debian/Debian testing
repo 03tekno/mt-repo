@@ -9,3 +9,6 @@ Debian testing depo adresi:
 deb https://deb.debian.org/debian testing main contrib non-free non-free-firmware
 
 /etc/apt/sources.list dosyasına ekleyip sudo apt update yap!
+
+log site:
+https://cdimage.debian.org/cdimage/weekly-live-builds/amd64/iso-hybrid/
