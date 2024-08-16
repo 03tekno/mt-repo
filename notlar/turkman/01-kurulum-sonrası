@@ -1,8 +1,9 @@
 Turkman Linux Notlarım:
 
-Turkman kurulum sonrası terminalden depoyu güncelleyelim.
-ymp repo --update --ignore-gpg (apt update komutu gibi)
-ymp install --upgrade (apt upgrade komutu gibi)
+root alalım
+ymp repo --update --ignore-gpg
+ymp clean
+ymp repo --update
 
 Depodan paket kurmak için:
 it veya install komutu kullanılır
@@ -15,18 +16,11 @@ rm veya remove komutu kullanılır
 ymp remove xarchiver
 
 
-papirus kurulumu
-https://www.gnome-look.org/p/1166289/
-download dan papirus-icon-theme.tar.gz indir
+Firmware güncellemesi: 
+mklinux yeniden kuralım
+ymp install --reinstall --ignore-dependency mklinux --no-emerge
+mkfw -u
+mkfw -i
 
-cd Download ile dizine gir
-/bin/su komutu ile root ol
-tar -xvf papirus-*.tar.gz -C /usr/share/icons
+firmware indirildikten sonra /lib dizini içindeki firmware dizinini kople silip firmware-mkfw dizininin ismini firmware yapıyoruz
 
-
-
-debianda
-cd /tmp
-wget https://github.com/03tekno/debhane/raw/main/papirus-icon-theme-20240201.tar.xz
-tar -xvf .tar.gz -C /usr/share/icons
-update-icon-caches /usr/share/icons/*
