@@ -22,6 +22,7 @@ reboot
 
 https://flathub.org/ sitesine giriş yapıp kurmak istediğimiz uygulamanın manuel install komutunu kopyalayıp terminale yazılım:
 Örnek flatpak uygulama kurulumu: 
+flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub org.gimp.GIMP
 
 Kurulu olan bir flatpak uygulamasını kaldırma:
