@@ -5,6 +5,8 @@ ymp repo --update --ignore-gpg
 ymp clean
 ymp repo --update
 
+ymp install --upgrade
+
 Depodan paket kurmak için:
 it veya install komutu kullanılır
 
