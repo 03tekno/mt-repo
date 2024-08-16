@@ -6,9 +6,10 @@ ymp install build-base --no-emerge
 ymp install flatpak --no-emerge
 
 Servisleri açalım:
-rc-update add devfs
+rc-update add devfs 
 rc-update add fuse
 rc-update add hostname
+
 root dan exit komutu ile çıkalım
 
 Flatpak depo ekleyelim: (rootsuz)
