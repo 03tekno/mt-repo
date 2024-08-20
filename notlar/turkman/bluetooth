@@ -1,0 +1,11 @@
+Turkman Linux bluetooth etkinleştirme ve aygıtı bağlama
+
+rc-update add bluetooth
+rc-service bluetooth start
+modprobe uhid
+
+bluetoothctl scan on (Aygıt tarama)
+bluetoothctl connect Mac Address (Aygıta bağlanma)
+bluetoothctl disconnect Mac Address (Aygıt bağlantısını kesme)
+
+https://flathub.org/apps/io.emeric.toolblx (Mac adresi için uygulama)
