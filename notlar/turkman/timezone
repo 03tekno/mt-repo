@@ -1,0 +1,7 @@
+Turkman Linux zaman dilimini ayarlama:
+ymp install tzdata
+
+rm /etc/localtime
+ln -s /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
+veya
+ln -s /usr/share/zoneinfo/Asia/Istanbul /etc/localtime
