@@ -19,4 +19,4 @@ ymp install --reinstall --ignore-dependency mklinux --no-emerge
 mkfw -u
 mkfw -i
 
-firmware indirildikten sonra /lib dizini içindeki firmware dizinini kople silip firmware-mkfw dizininin ismini firmware yapıyoruz.
+firmware indirildikten sonra /lib dizini içindeki firmware dizinini komple silip firmware-mkfw dizininin ismini firmware yapıyoruz.
