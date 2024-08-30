@@ -1,0 +1,32 @@
+1.Github’a kayıt yaptırın ve yeni bir repository oluşturun.
+
+2. Bilgisayarınıza git versiyon kontrol sistemini yükleyiniz. Sırasıyla aşağıdaki kodlar ile yapılandırma işlemlerini yapınız.
+
+ymp it git --no-emerge
+
+git config --global user.name "example"
+git config --global user.email "email@example.com"
+
+3.deneme adında bir repository oluşturduğunuzu düşünün.Github ta yeni bir repo oluştururken aşağıdakini işaretlediyseniz.
+echo "# deneme" >> README.md
+
+4. Bilgisayarınızda bir proje oluşturun.
+git init
+
+Komutuyla yeni bir local depo oluşturun.
+5. 3. adımı işaretlediyseniz.Aşağıdaki komutu kullanınız.
+git add README.md
+
+Aşağıdaki komutla bütün dosyalarınızı yerel repoya ekleyebilirsiniz.
+git add . 
+
+6.Aşağıdaki komutla ilk commit(yorum) işleminizi gerçekleştiriniz.
+git commit -m "ilk commit"
+
+7.Aşağıdaki kod parçası isimli bir uzak repository olan github a göndermenize yarar.
+git remote add origin https://github.com/nafidurmus/deneme.git
+
+8.Son olarak aşağıdaki komutla githuba projenizi gönderiniz.
+git push -u origin master
+
+Kaynek: https://medium.com/kodcular/githuba-8-ad%C4%B1m-da-git-ile-proje-nas%C4%B1l-y%C3%BCklenir-5a7f7f8aeaf3
