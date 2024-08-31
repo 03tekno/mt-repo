@@ -4,8 +4,8 @@
 
 ymp it git --no-emerge
 
-git config --global user.name "example"
-git config --global user.email "email@example.com"
+git config --global user.name "mobilturka"
+git config --global user.email "03teknoloji@gmail.com"
 
 3.deneme adında bir repository oluşturduğunuzu düşünün.Github ta yeni bir repo oluştururken aşağıdakini işaretlediyseniz.
 echo "# deneme" >> README.md
