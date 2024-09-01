@@ -5,9 +5,7 @@ su
 ymp install build-base flatpak --no-emerge
 
 Servisleri açalım:
-rc-update add devfs 
-rc-update add fuse
-rc-update add hostname
+rc-update add devfs && rc-update add fuse && rc-update add hostname
 
 root dan exit komutu ile çıkalım
 
