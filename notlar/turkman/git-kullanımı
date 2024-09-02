@@ -7,26 +7,25 @@ ymp it git --no-emerge
 git config --global user.name "mobilturka"
 git config --global user.email "03teknoloji@gmail.com"
 
-3.deneme adında bir repository oluşturduğunuzu düşünün.Github ta yeni bir repo oluştururken aşağıdakini işaretlediyseniz.
-echo "# deneme" >> README.md
+3. git clone https://gitlab.com/mobilturka/main.git
 
-4. Bilgisayarınızda bir proje oluşturun.
-git init
-
-Komutuyla yeni bir local depo oluşturun.
-5. 3. adımı işaretlediyseniz.Aşağıdaki komutu kullanınız.
-git add README.md
-
-Aşağıdaki komutla bütün dosyalarınızı yerel repoya ekleyebilirsiniz.
+4. Aşağıdaki komutla bütün dosyalarınızı yerel repoya ekleyebilirsiniz.
 git add . 
 
-6.Aşağıdaki komutla ilk commit(yorum) işleminizi gerçekleştiriniz.
+5.Aşağıdaki komutla ilk commit(yorum) işleminizi gerçekleştiriniz.
 git commit -m "ilk commit"
 
-7.Aşağıdaki kod parçası isimli bir uzak repository olan github a göndermenize yarar.
+6.Aşağıdaki kod parçası isimli bir uzak repository olan github a göndermenize yarar.
 git remote add origin https://github.com/nafidurmus/deneme.git
 
-8.Son olarak aşağıdaki komutla githuba projenizi gönderiniz.
+7.Son olarak aşağıdaki komutla githuba projenizi gönderiniz.
+git push origin master
+yada
 git push -u origin master
 
-Kaynek: https://medium.com/kodcular/githuba-8-ad%C4%B1m-da-git-ile-proje-nas%C4%B1l-y%C3%BCklenir-5a7f7f8aeaf3
+8. Uzak depoda bulunan tüm değişiklikleri yerel çalışma dizinine birleştirmek için çekme komutu kullanılır.
+git pull
+
+Kaynaklar: 
+https://medium.com/kodcular/githuba-8-ad%C4%B1m-da-git-ile-proje-nas%C4%B1l-y%C3%BCklenir-5a7f7f8aeaf3
+https://www.hostinger.web.tr/rehberler/github-kullanimi-basit-git-komutlari
