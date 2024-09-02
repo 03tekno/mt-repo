@@ -3,17 +3,20 @@ Turkman linux kernel derleme ve kurulum işlemleri:
 root alalım
 ymp it build-base mklinux --no-emerge 
 
-ympbuild dosyasını kernel isimli yeni bir dizin oluşturarak içine atalım
-ympbuild release kısmını 1 sayı artıralım
+Kernel derleme işlemi:
+Dizin oluştur
+ympbuild deki release kısmını 1 sayı artır
 version kısmına kernel.org sitesindeki latest release yazan sürüm numarasını yazalım (sarı buton)
-kernel dizini içinde terminal açalım ve kernel derlemeye komutunu girelim:
-ymp build
+Dizin içinde terminal açalım ve kernel derlemeye komutunu girelim:
+ymp build (rootsuz!)
 
 linux_sürüm_numarası_x86_64.ymp olan dosyanın kurulumunu yapalım:
 ymp it ./linux_sürüm_numarası_x86_64.ymp 
+Örnek:
+ymp it ./linux_6.10.7_x86_64.ymp
 
 initrd güncelleyelim
-update-initramfs -u -k 6.10.3
+update-initramfs -u -k 6.10.7
 
-Grubu güncelleyelim
+Grubu güncelleyelip bilgisayarı yeniden başlatalım. 
 update-grub
