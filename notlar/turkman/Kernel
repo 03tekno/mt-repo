@@ -16,4 +16,4 @@ initrd güncelleyelim
 update-initramfs -u -k 6.10.3
 
 Grubu güncelleyelim
-grup-mkconfig -o /boot/grub/grub.cfg yada update-grub
+update-grub
