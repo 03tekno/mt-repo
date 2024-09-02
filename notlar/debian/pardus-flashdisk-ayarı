@@ -1,0 +1,6 @@
+Sisteme bir USB flaş bağlayıp içine genellikle 1GB ve üzeri veri attıktan sonra ekrandaki kopyalama penceresi kopyalamanın yüzde yüze geldiğini göstererek kapanıyor.
+Ancak flashdisk ışığı yanıp sönüyor probleminin çözümü: Tampon oranını düşürmek
+sudo echo "1" > /proc/sys/vm/dirty_ratio
+
+Açılışta devreye girmesi için;
+sudo sysctl -w "vm.dirty_ratio=1" > /etc/sysctl.d/10-dirty-ratio.conf
