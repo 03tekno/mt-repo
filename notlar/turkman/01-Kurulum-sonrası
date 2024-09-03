@@ -1,19 +1,29 @@
 Turkman Linux kurulum sonrası terminali açalım ve aşağıdaki komutlarla depomuzu güncelleyelim: (root ile)
 ymp repo --update --ignore-gpg && ymp clean && ymp repo --update
 
+Depodaki güncellenecek pkaetleri görmek için:
+ymp it --update
+
 Depoda güncellenen paketleri kurmak için:
-ymp install --upgrade --no-emerge
+ymp it --upgrade --no-emerge
 
 Depodan paket kurmak için:
 it veya install komutu kullanılır
+
 Örnek:
-ymp install xarchiver (Kaynak koddan paket kurulum için)
-ymp install xarchiver --no-emerge (Depodan derlenmiş .ymp paketi kurmak için)
+ymp it xarchiver (Kaynak koddan paket kurulum için)
+ymp it xarchiver --no-emerge (Depodan derlenmiş .ymp paketi kurmak için)
 
 Kurulu paketi kaldırmak için rm veya remove komutu kullanılır:
 ymp remove xarchiver
 
 
+
+
+
+
+
+Buna gerek kalmadı ama kalsın :)
 Firmware güncellemesi: mklinux yeniden kuralım
 ymp install --reinstall --ignore-dependency mklinux --no-emerge
 mkfw -u
