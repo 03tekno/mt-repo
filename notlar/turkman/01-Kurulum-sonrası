@@ -1,7 +1,7 @@
 Turkman Linux kurulum sonrası terminali açalım ve aşağıdaki komutlarla depomuzu güncelleyelim: (root ile)
 ymp repo --update --ignore-gpg && ymp clean && ymp repo --update
 
-Depodaki güncellenecek pkaetleri görmek için:
+Depodaki güncellenen paketleri görmek için:
 ymp it --update
 
 Depoda güncellenen paketleri kurmak için:
