@@ -4,9 +4,8 @@ root alalım
 ymp it build-base mklinux --no-emerge 
 
 Kernel derleme işlemi:
-Dizin oluştur
-ympbuild deki release kısmını 1 sayı artır
-version kısmına kernel.org sitesindeki latest release yazan sürüm numarasını yazalım (sarı buton)
+Kernel isimli bir izin oluşturup içine ympbuild dosyasını ekleyelim. 
+ympbuild deki release kısmını 1 sayı artırıp version kısmına kernel.org sitesindeki latest release yazan sürüm numarasını yazalım (sarı buton)
 Dizin içinde terminal açalım ve kernel derlemeye komutunu girelim:
 ymp build (rootsuz!)
 
@@ -15,7 +14,7 @@ ymp it ./linux_sürüm_numarası_x86_64.ymp
 Örnek:
 ymp it ./linux_6.10.7_x86_64.ymp
 
-initrd güncelleyelim
+initrd güncelleyelim: (Kernel'in sürüm numarası ile aynı olmalı!)
 update-initramfs -u -k 6.10.7
 
 Grubu güncelleyelip bilgisayarı yeniden başlatalım. 
