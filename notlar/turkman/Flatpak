@@ -1,7 +1,6 @@
 Turkman Linux Flatpak kurulumu ve kullanımı:
 
-Root olalım ve flatpak kuralım:
-su
+Flatpak kuralım: (rootlu)
 ymp install build-base flatpak --no-emerge
 
 Servisleri açalım:
@@ -19,7 +18,6 @@ reboot
 
 https://flathub.org/ sitesine giriş yapıp kurmak istediğimiz uygulamanın manuel install komutunu kopyalayıp terminale yazılım:
 Örnek flatpak uygulama kurulumu: 
-flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub org.gimp.GIMP
 
 Kurulu olan bir flatpak uygulamasını kaldırma:
