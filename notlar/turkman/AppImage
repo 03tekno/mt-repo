@@ -18,12 +18,10 @@ Not: https://flathub.org/apps/it.mijorus.gearlever uygulaması ile AppImage dosy
 Manuel kurulumu ise:
 
 AppImage için izin verelim : chmod +x file_name.AppImage
-
 Çalıştırmak için : çift tıkla yada ./file_name.AppImage
 
 
 Örnek Desktop Entry dosya yapımı:
-
 [Desktop Entry]
 Name=QMPlay2
 Exec=/path/to/qmplay2.AppImage
