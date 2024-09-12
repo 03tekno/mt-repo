@@ -7,10 +7,10 @@ ymp it git --no-emerge
 git config --global user.name "mobilturka"
 git config --global user.email "03teknoloji@gmail.com"
 
-3. git clone https://gitlab.com/mobilturka/main.git
+3. git clone https://gitlab.com/mobilturka/turkman.git
 
-4. Aşağıdaki komutla bütün dosyalarınızı yerel repoya ekleyebilirsiniz.
-git add . 
+4. turkman dizini içinde terminal açıp aşağıdaki komutla bütün dosyalarınızı yerel repoya ekleyebilirsiniz.
+git add .
 
 5.Aşağıdaki komutla ilk commit(yorum) işleminizi gerçekleştiriniz.
 git commit -m "ilk commit"
