@@ -17,6 +17,7 @@ git commit -m "ilk commit"
 
 6.Aşağıdaki kod parçası isimli bir uzak repository olan github a göndermenize yarar.
 git remote add origin https://github.com/nafidurmus/deneme.git
+git push -u https://gitlab.com/mobilturka/mt-turkman.git master
 
 7.Son olarak aşağıdaki komutla githuba projenizi gönderiniz.
 git push origin master
