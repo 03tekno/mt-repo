@@ -14,8 +14,6 @@ ymp it ./linux_sürüm_numarası_x86_64.ymp
 Örnek:
 ymp it ./linux_6.10.7_x86_64.ymp
 
-initrd güncelleyelim: (Kernel'in sürüm numarası ile aynı olmalı!)
-update-initramfs -u -k 6.10.7
-
 Grubu güncelleyelip bilgisayarı yeniden başlatalım. 
 update-grub
+reboot
