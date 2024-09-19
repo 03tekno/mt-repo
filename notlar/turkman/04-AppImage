@@ -1,25 +1,22 @@
 Turkman Linux AppImage nasıl çalıştırılır?
 
 AppImage için aşağıdaki komutu girelim. (rootlu)
-ymp install fuse fuse2 --no-emerge && rc-update add fuse && rc-service fuse start && modprobe fuse && mount -t fusectl none /sys/fs/fuse/connections && chmod u+s /usr/bin/fusermount
+
+ymp install fuse fuse2 --no-emerge
+rc-update add fuse
+rc-service fuse start
+modprobe fuse
+mount -t fusectl none /sys/fs/fuse/connections
+chmod u+s /usr/bin/fusermount
+
+Gear Lever uygulamasını flatpaktan indirip AppImage uygulamalarımızı pratik bir şekilde kullanabiliriz. (Rootsuz)
+flatpak install flathub it.mijorus.gearlever
 
 
-Not: https://flathub.org/apps/it.mijorus.gearlever uygulaması ile AppImage dosyalarını çok pratik bir şekilde çalıştırıp menüye ekletmek mümkün. 
-
-
-
-
-
-
-
-
-
-
-Manuel kurulumu ise:
+AppImage Manuel kurulumu ise:
 
 AppImage için izin verelim : chmod +x file_name.AppImage
 Çalıştırmak için : çift tıkla yada ./file_name.AppImage
-
 
 Örnek Desktop Entry dosya yapımı:
 [Desktop Entry]
