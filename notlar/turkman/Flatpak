@@ -1,18 +1,19 @@
 Turkman Linux Flatpak kurulumu ve kullanımı:
 
 Flatpak kuralım: (rootlu)
-ymp install build-base flatpak --no-emerge
+ymp install flatpak --no-emerge
 
 Servisleri açalım:
-rc-update add devfs && rc-update add fuse && rc-update add hostname
+rc-update add devfs
+rc-update add fuse
+rc-update add hostname
 
 root dan exit komutu ile çıkalım
 
 Flatpak depo ekleyelim: (rootsuz)
 flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-Bilgisayarı yeniden başlatalım:
-reboot
+Bilgisayarı yeniden başlatalım.
 
 Önemli Not: Flatpak paketlerinin kurulumu, kaldırılması yada güncellenmesi rootsuz yapılır!
 
