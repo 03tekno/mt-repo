@@ -17,16 +17,3 @@ ymp it xarchiver --no-emerge (Depodan derlenmiş .ymp paketi kurmak için)
 Kurulu paketi kaldırmak için rm veya remove komutu kullanılır:
 ymp remove xarchiver
 
-
-
-
-
-
-
-Buna gerek kalmadı ama kalsın :)
-Firmware güncellemesi: mklinux yeniden kuralım
-ymp install --reinstall --ignore-dependency mklinux --no-emerge
-mkfw -u
-mkfw -i
-
-firmware indirildikten sonra /lib dizini içindeki firmware dizinini komple silip firmware-mkfw dizininin ismini firmware yapıyoruz.
