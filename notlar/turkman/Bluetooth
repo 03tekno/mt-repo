@@ -1,5 +1,7 @@
-Turkman Linux bluetooth etkinleştirme ve aygıtı bağlama:
-rc-update add bluetooth & rc-service bluetooth start & modprobe uhid (rootlu)
+Turkman Linux bluetooth etkinleştirme ve aygıtı bağlama: (Rootlu)
+rc-update add bluetooth 
+rc-service bluetooth start
+modprobe uhid
 
 bluetoothctl scan on (Aygıt tarama)
 bluetoothctl connect Mac Address (Aygıta bağlanma)
