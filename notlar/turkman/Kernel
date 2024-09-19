@@ -10,6 +10,7 @@ Dizin içinde terminal açalım ve kernel derlemeye komutunu girelim:
 ymp build (rootsuz!)
 
 linux_sürüm_numarası_x86_64.ymp olan dosyanın kurulumunu yapalım:
+su komutu ile root olalım
 ymp it ./linux_sürüm_numarası_x86_64.ymp 
 Örnek:
 ymp it ./linux_6.10.7_x86_64.ymp
