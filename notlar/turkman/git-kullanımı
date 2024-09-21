@@ -4,10 +4,10 @@
 
 ymp it git --no-emerge
 
-git config --global user.name "mobilturka"
-git config --global user.email "03teknoloji@gmail.com"
+git config --global user.name "linuxturk"
+git config --global user.email "linuxturka@gmail.com"
 
-3. git clone https://gitlab.com/mobilturka/turkman.git
+3. git clone https://gitlab.com/linuxturk/turkman.git
 
 4. turkman dizini içinde terminal açıp aşağıdaki komutla bütün dosyalarınızı yerel repoya ekleyebilirsiniz.
 git add .
