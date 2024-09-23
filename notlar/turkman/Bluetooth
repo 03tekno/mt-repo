@@ -3,9 +3,18 @@ rc-update add bluetooth
 rc-service bluetooth start
 modprobe uhid
 
-bluetoothctl scan on (Aygıt tarama)
-bluetoothctl connect Mac Address (Aygıta bağlanma)
-örnek: bluetoothctl connect E2:4E:41:13:3B:24
-bluetoothctl disconnect Mac Address (Aygıt bağlantısını kesme)
 
-https://flathub.org/apps/io.emeric.toolblx (Mac adresi için güzel bir uygulama)
+Bluetooth kullanım komutları: 
+
+1- bluetoothctl scan on (Aygıt tarama)
+
+2- bluetoothctl connect Mac Address (Aygıta bağlanmak için):
+bluetoothctl connect E2:4E:41:13:3B:24
+
+3- bluetoothctl disconnect Mac Address (Aygıt bağlantısını kesme):
+bluetoothctl disconnect E2:4E:41:13:3B:24
+
+4- bluetoothctl trust Mac Address (Aygıta kalıcı bağlanmak için)
+bluetoothctl trust E2:4E:41:13:3B:24
+
+https://flathub.org/apps/io.emeric.toolblx (Mac adresi tespiti için güzel bir gui uygulama)
