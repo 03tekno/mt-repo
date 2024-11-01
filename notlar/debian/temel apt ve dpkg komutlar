@@ -62,4 +62,4 @@ sudo apt update && sudo apt upgrade
 sudo apt clean && sudo apt autoremove
 sudo dpkg --configure -a
 sudo apt-get install -f
-sudo apt --fix-broken
+sudo apt --fix-broken install
