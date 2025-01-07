@@ -1,0 +1,1 @@
+sudo nano /etc/default/locale komutu ile ayar sayfasını açalım sayfada en_US.UTF-8 yazan bölümü tr_TR.UTF-8 yapalım.
