@@ -1,1 +1,18 @@
-sudo nano /etc/default/locale komutu ile ayar sayfasını açalım sayfada en_US.UTF-8 yazan bölümü tr_TR.UTF-8 yapalım.
+Sistemimiz eğer ingilizce ise
+/etc/default/locale dosyasını açalım ve
+en_US.UTF-8 yazan bölümü tr_TR.UTF-8 yapalım.
+
+Örnek locale dosyası:
+LANG=tr_TR.UTF-8 
+LC_CTYPE="tr_TR.UTF-8" 
+LC_MESSAGES="tr_TR.UTF-8" 
+LC_ALL="tr_TR.UTF-8" 
+LC_NUMERIC="tr_TR.UTF-8" 
+LC_TIME="tr_TR.UTF-8" 
+LC_MONETARY="tr_TR.UTF-8" 
+LC_PAPER="tr_TR.UTF-8" 
+LC_NAME="tr_TR.UTF-8" 
+LC_ADDRESS="tr_TR.UTF-8" 
+LC_TELEPHONE="tr_TR.UTF-8" 
+LC_MEASUREMENT="tr_TR.UTF-8" 
+LC_IDENTIFICATION="tr_TR.UTF-8" 
