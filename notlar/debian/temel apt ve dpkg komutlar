@@ -22,13 +22,11 @@ Paket hakkında bilgi almak için:
 sudo apt-cache show paket_adı
 
 Tek paket kurmak için:
-sudo apt install paket_adı
+sudo apt install ./paket_adı
+sudo dpkg -i paket_adı.deb 
 
 Çoklu paket kurmak için:
-sudo apt install paket1 paket2 paket3 
-
-Paketleri yerel bir dizinden kurmak için:
-sudo dpkg -i paket_adı.deb && sudo apt install -f yada sudo apt install ./paket_adı
+sudo apt install ./paket1 paket2 paket3 yada sudo apt install ./*.deb gibi
 
 Site üzerinden paket kurmak için:
 wget https://site.com/depo/paket_adı.deb && sudo apt install ./paket_adı.deb
