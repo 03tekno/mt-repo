@@ -1,4 +1,5 @@
 AppImage nasıl çalıştırılır?
+(Sistemde fuse libfuse2 yada fuse3 ve libfuse3 paketlerine ihtiyaç olabilir!)
 
 AppImage dosyamızın program gibi çalışmasına izin verelim
 chmod +x paket_name.AppImage
