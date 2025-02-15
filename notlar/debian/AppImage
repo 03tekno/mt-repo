@@ -21,3 +21,15 @@ AppImage ayıklama işlemi:
 ./paket_name.AppImage --appimage-extract
 cd squashfs-root
 ./AppRun
+
+QMPlay2 için örnek Desktop Entry dosyası: 
+/home/mt/.local/share/applications içine qmplay2.desktop dosyası açalım ve içine aşağıdakileri ekleyelim
+
+[Desktop Entry]
+Type=Application
+Name=Qmplay2
+Icon=video
+Exec=/home/mt/Apps/qmplay2.AppImage
+Categories=AudioVideo
+Terminal=false
+
