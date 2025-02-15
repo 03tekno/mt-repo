@@ -1,11 +1,11 @@
 AppImage nasıl çalıştırılır?
-(Sistemde fuse libfuse2 yada fuse3 ve libfuse3 paketlerine ihtiyaç olabilir!)
+(Bazı AppImage paketleri için gerekli olan fuse libfuse2 fuse3 libfuse3 paketleri yoksa kuralım!)
 
 AppImage dosyamızın program gibi çalışmasına izin verelim
 chmod +x paket_name.AppImage
 
-Apprepo diye dizin oluşturup içine istediğimiz kadar AppImage dosyası atalım. Tek komutta hepsine çalıştır izini vermek için:
-chmod +x /Apprepo/*.AppImage komutu vermemiz yeterlidir.
+Apps diye dizin oluşturup içine istediğimiz kadar AppImage dosyası atalım. Tek komutta hepsine çalıştır izini vermek için Apps dizini içinde terminal açıp:
+chmod +x /Apps/*.AppImage komutu vermemiz yeterlidir.
 
 AppImage çalıştırma:
 ./paket_adı.AppImage
