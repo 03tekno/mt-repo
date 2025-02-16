@@ -27,7 +27,7 @@ QMPlay2 için örnek Desktop Entry dosyası:
 
 [Desktop Entry]
 Type=Application
-Name=Qmplay2
+Name=QMPlay2
 Icon=video
 Exec=/home/mt/Apps/qmplay2.AppImage
 Categories=AudioVideo
