@@ -1,0 +1,3 @@
+sudo apt remove firmware-atheros firmware-bnx2 firmware-brcm80211 firmware-cavium firmware-intel-sound firmware-iwlwifi firmware-libertas firmware-myricom firmware-netxen firmware-qlogic firmware-ralink firmware-sof-signed
+  Genel ayarlardan ram miktarı iptal et
+  tema ve iconları ayarla
