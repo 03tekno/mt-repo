@@ -1,0 +1,32 @@
+
+DEBİAN TESTING LITE ISO YAPIMI 
+
+1.Adım:
+sudo apt update && sudo apt install live-build
+
+
+2.Adım:
+
+mkdir debian-live-custom && cd debian-live-custom
+
+
+3.Adım:
+
+lb config noauto \
+--distribution "testing" \
+--debian-installer live \
+--archive-areas "main contrib non-free non-free-firmware" \
+--binary-images iso-hybrid
+
+
+4.Adım
+
+config/package-lists/packages.list.chroot dizinine gidip kurulu gelmesini istediğimiz paketleri yazalım
+cinnamon
+calamares-settings-debian
+synaptic
+mousepad
+
+
+5.Adım:
+sudo lb build
