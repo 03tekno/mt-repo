@@ -30,3 +30,6 @@ mousepad
 
 5.Adım:
 sudo lb build
+
+Önemli Not: Testing ISO yapanlar için kurulum sonrası /etc/apt/sources.list içeriğindeki depo adreslerini silip aşağıdaki depo adresini yazdığımızda sistem yuvarlanan sürüm olur!
+deb http://deb.debian.org/debian testing main non-free non-free-firmware
