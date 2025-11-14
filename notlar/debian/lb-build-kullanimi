@@ -13,9 +13,9 @@ mkdir debian-live-custom && cd debian-live-custom
 3.Adım:
 
 lb config noauto \
---distribution testing \
+--distribution "testing" \
 --debian-installer live \
---archive-areas main contrib non-free non-free-firmware \
+--archive-areas "main contrib non-free non-free-firmware" \
 --binary-images iso-hybrid
 
 
