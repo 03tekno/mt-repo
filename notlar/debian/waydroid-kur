@@ -1,8 +1,8 @@
-# if you're on debian run this
+# Waydroid Kurulumu için aşağıda yazılı tüm komutları tek seferde kopyala yapıp terminale yapıştırmanız yeterlidir.
+
+# Pardus 25 için Debian 13 Trixie olması gerekiyor! 
 export distro=trixie
-# or if you're on ubuntu run this
-
-
+# Pardus 23 kullananlar aşağıda komutu export distro=bullseye yapması gerekiyor!
 
 sudo curl https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg
 echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ ${distro} main" | \
@@ -28,13 +28,14 @@ sudo debuild -b -uc -us
 sudo apt install -f -y ../*.deb
 
 sudo apt remove libgbinder-dev gbinder-python-build-deps git-lfs fakeroot equivs devscripts cdbs
-# you can remove git and build-essential packages too
+
+# git ve build-essential paketlerini de kaldırabilirsiniz
 sudo apt autoremove
 sudo rm /usr/bin/build_changelog
 
 sudo apt install waydroid
 
-Önemli not: Kurulum sonrası:
+# Önemli not: Kurulum sonrası:
 sudo systemctl enable --now waydroid-container
 sudo waydroid container start
 waydroid show-full-ui
