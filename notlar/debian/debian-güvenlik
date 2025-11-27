@@ -1,0 +1,90 @@
+Ultra güvenlik önlemleri, bir Debian sistemini **sertleştirme (hardening)** sürecini ifade eder. Bu süreç, varsayılan kurulum ayarlarını değiştirerek, saldırı yüzeyini en aza indirerek ve savunma mekanizmalarını güçlendirerek potansiyel güvenlik açıklarını kapatmayı amaçlar.
+
+İşte bir Debian sunucusu için alınması gereken ultra güvenlik önlemleri, katmanlı bir yaklaşımla özetlenmiştir:
+
+-----
+
+## 1️⃣ Sistem Güncelliği ve Temel Yapılandırma
+
+Bu, güvenlik sertleştirmenin en temel ve en kritik adımıdır.
+
+  * **Güncel Tutma:** Sistemi ve kurulu tüm paketleri düzenli olarak güncelleyin. Özellikle **güvenlik yamalarını** otomatik olarak uygulamak için `unattended-upgrades` paketini kurup yapılandırın.
+    ```bash
+    sudo apt update && sudo apt upgrade
+    sudo apt install unattended-upgrades
+    ```
+  * **Gereksiz Servisleri Devre Dışı Bırakma:** Kullanılmayan veya ihtiyaç duyulmayan tüm servisleri (`systemctl` ile kontrol edin) durdurun ve sistem başlangıcında çalışmasını engelleyin. **Saldırı yüzeyini azaltmanın** en etkili yoludur.
+    ```bash
+    sudo systemctl stop servis_adi
+    sudo systemctl disable servis_adi
+    ```
+  * **Minimal Kurulum:** Sistemin ilk kurulumunu yaparken yalnızca gerçekten gerekli olan paketleri kurun (örneğin, **Debian Netinstall**). GUI ve masaüstü ortamlarından kaçının.
+
+-----
+
+## 2️⃣ Kullanıcı ve Erişim Kontrolü
+
+Yetkilendirme ve kimlik doğrulama mekanizmalarını sıkılaştırma.
+
+  * **Root Erişimini Kısıtlama:**
+      * **Root** kullanıcısının **SSH** ile doğrudan oturum açmasını kesinlikle yasaklayın (`/etc/ssh/sshd_config` dosyasında `PermitRootLogin no`).
+      * Yönetim görevleri için yalnızca yetkili kullanıcıların `sudo` kullanmasına izin verin.
+  * **Güçlü Parola Politikası:**
+      * Parola karmaşıklığını zorunlu kılın (`libpam-cracklib` paketi ve `/etc/security/pwquality.conf` ile).
+      * Parola ömrünü ve tekrar kullanma kısıtlamalarını ayarlayın.
+  * **Anahtar Tabanlı SSH:** Parolalı SSH kimlik doğrulamasını devre dışı bırakın ve yalnızca **SSH anahtar çiftlerini** kullanın. Bu, brute-force saldırılarına karşı en güçlü savunmadır.
+    ```bash
+    # /etc/ssh/sshd_config içinde
+    PasswordAuthentication no
+    PubkeyAuthentication yes
+    ```
+  * **Fail2ban Kurulumu:** Başarısız oturum açma denemelerini izlemek ve belirli bir sayıya ulaştığında saldırgan IP adreslerini güvenlik duvarında otomatik olarak engellemek için **Fail2ban** kullanın.
+
+-----
+
+## 3️⃣ Ağ ve Güvenlik Duvarı (Firewall)
+
+Sunucuya gelen ve giden trafiği kontrol altına alma.
+
+  * **Güvenlik Duvarı (Firewall) Yapılandırması:** Yalnızca ihtiyacınız olan portları (örneğin 22/SSH, 80/HTTP, 443/HTTPS) açmak için **iptables** veya daha basit bir arayüz olan **UFW (Uncomplicated Firewall)** kullanın.
+    ```bash
+    sudo apt install ufw
+    sudo ufw default deny incoming
+    sudo ufw allow ssh/tcp  # veya 22/tcp
+    sudo ufw enable
+    ```
+  * **Sızma Tespit Sistemi (IDS):** Ağ trafiğini zararlı imzalar açısından gerçek zamanlı izlemek için **Suricata** veya **Snort** gibi bir **IDS/IPS** (Sızma Önleme Sistemi) kurmayı düşünün.
+
+-----
+
+## 4️⃣ Çekirdek (Kernel) ve Dosya Sistemi Güvenliği
+
+Sistem düzeyinde ek koruma mekanizmaları.
+
+  * **AppArmor veya SELinux:** Bu zorunlu erişim kontrolü (MAC) mekanizmalarından birini etkinleştirerek, sistemdeki süreçlerin hangi dosyalara ve kaynaklara erişebileceğini sıkı kurallarla tanımlayın. **AppArmor** genellikle Debian'da daha yaygın kullanılır ve yönetimi daha kolaydır.
+  * **Sistem Parametrelerinin Sertleştirilmesi (sysctl):** Çekirdek parametrelerini (`/etc/sysctl.conf` üzerinden) değiştirerek ağ ve bellek güvenliğini artırın (Örn: IP sahtekarlığına karşı koruma, SYN-flood saldırılarına karşı koruma).
+    ```bash
+    # /etc/sysctl.conf'a ekle:
+    net.ipv4.conf.all.accept_source_route = 0
+    net.ipv4.conf.all.log_martians = 1
+    net.ipv4.icmp_echo_ignore_broadcasts = 1
+    # ... ve daha fazlası için 'hardening sysctl' araması yapın.
+    ```
+  * **Kök Kullanıcının Dosya Sistemi (Home Directory) Ayarları:** `/etc/fstab` içinde hassas dizinleri (örneğin `/dev/shm` veya `/tmp`) **`noexec`** ve **`nosuid`** seçenekleriyle bağlayarak bu dizinlerden çalıştırılabilir dosyaların ve setuid/setgid bitlerinin çalıştırılmasını engelleyin. Bu, yerel yetki yükseltme saldırılarını zorlaştırır.
+
+-----
+
+## 5️⃣ İzleme ve Denetim
+
+Sistemde neler olup bittiğini sürekli takip etme.
+
+  * **Günlük (Log) Yönetimi:** Tüm sistem günlüklerini (journal) merkezi ve güvenli bir sunucuya (örneğin bir **SIEM** sistemine) yedekleyin. Böylece saldırganlar sunucunuzdaki kanıtları silemezler.
+  * **Sistem Denetimi (Auditing):** **Auditd** hizmetini etkinleştirerek, hassas dosyaların erişimi ve root komutları gibi kritik sistem olaylarını detaylıca kaydedin ve izleyin.
+  * **Güvenlik Denetim Araçları:** Sistemi düzenli olarak zafiyetler ve yanlış yapılandırmalar açısından taramak için **Lynis** veya **Chkrootkit** gibi araçları kullanın.
+    ```bash
+    sudo apt install lynis
+    sudo lynis audit system
+    ```
+  * **Dosya Bütünlüğü İzleme (FIM):** **AIDE** (Advanced Intrusion Detection Environment) veya **Tripwire** gibi araçları kurarak kritik sistem dosyalarının (örneğin `/bin`, `/usr/bin`, `/etc`) izinsiz olarak değiştirilip değiştirilmediğini sürekli kontrol edin.
+
+Bu önlemleri uygulayarak, Debian sisteminizin güvenlik duruşunu önemli ölçüde güçlendirebilir ve "ultra güvenlik" seviyesine yaklaştırabilirsiniz. Güvenliğin sürekli bir süreç olduğunu ve bu adımların düzenli olarak denetlenmesi ve güncellenmesi gerektiğini unutmayın.
