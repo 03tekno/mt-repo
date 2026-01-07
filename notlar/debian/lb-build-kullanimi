@@ -39,3 +39,113 @@ Eğer sisteminizi yuvarlanan sürüm (rolling release) yapmak istiyorsanız kuru
 Terminal komutu: 
 sudo rm /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian testing main contrib non-free non-free-firmware ' | sudo tee /etc/apt/sources.list && sudo apt update
+
+
+
+
+
+Örnek bir Debian iso yapma betiği:
+
+#!/bin/bash
+
+# --- AYARLAR ---
+OS_NAME="TurkaOS"
+OS_VERSION="2026"
+ISO_FILENAME="TurkaOS-2026-XFCE-Debian"
+WORK_DIR="live-build-workspace"
+DIST="stable"
+
+# Hata oluşursa işlemi durdur
+set -e
+
+# Root kontrolü
+if [ "$EUID" -ne 0 ]; then 
+  echo "HATA: Lütfen bu betiği sudo ile çalıştırın!"
+  exit 1
+fi
+
+echo "--- [$OS_NAME] Hazırlık: Gerekli paketler kontrol ediliyor ---"
+apt update || true
+apt install -y live-build debootstrap curl squashfs-tools xorriso debian-archive-keyring
+
+# Eski çalışma alanını temizle
+if [ -d "$WORK_DIR" ]; then
+    echo "--- Temizlik yapılıyor ---"
+    rm -rf "$WORK_DIR"
+fi
+mkdir "$WORK_DIR" && cd "$WORK_DIR"
+
+echo "--- [$OS_NAME] Yapılandırma Başlıyor (Debian) ---"
+
+
+lb config \
+    --mode debian \
+    --system live \
+    --distribution $DIST \
+    --debian-installer none \
+    --compression gzip \
+    --apt-recommends true \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --security true \
+    --updates true \
+    --image-name $ISO_FILENAME \
+    --bootappend-live "boot=live components locales=tr_TR.UTF-8 keyboard-layouts=tr hostname=turkaos username=turka quiet splash fastboot mitigations=off"
+
+# Sıkıştırma ayarlarını manuel olarak dosyaya ekle (Hata almamak için güvenli yöntem)
+echo 'LB_SQUASHFS_OPTIONS="-comp gzip -Xcompression-level 9 -b 1M"' >> config/binary
+
+# --- ÖZELLEŞTİRMELER ---
+
+mkdir -p config/includes.chroot/etc
+mkdir -p config/includes.chroot/usr/share/images/desktop-base
+mkdir -p config/includes.chroot/usr/share/icons
+mkdir -p config/includes.chroot/usr/share/themes
+mkdir -p config/includes.chroot/boot/grub
+mkdir -p config/includes.chroot/etc/default
+mkdir -p config/hooks/live
+mkdir -p config/package-lists
+
+# 1. Marka ve Sürüm Bilgisi
+cat <<EOF > config/includes.chroot/etc/os-release.turka
+PRETTY_NAME="$OS_NAME $OS_VERSION (Debian)"
+NAME="$OS_NAME"
+VERSION_ID="$OS_VERSION"
+ID=debian
+HOME_URL="https://github.com/03tekno/TurkaOS"
+EOF
+
+# 2. Hook: Güncelleme koruması
+cat <<EOF > config/hooks/live/01-branding.chroot
+#!/bin/sh
+dpkg-divert --add --rename --divert /etc/os-release.debian /etc/os-release
+cp /etc/os-release.turka /etc/os-release
+EOF
+chmod +x config/hooks/live/01-branding.chroot
+
+# 3. Dosyaları Kopyala
+echo "--- Dosyalar Kopyalanıyor ---"
+[ -f "../wallpaper.jpg" ] && cp ../wallpaper.jpg config/includes.chroot/usr/share/images/desktop-base/default-wallpaper.jpg || echo "UYARI: wallpaper.jpg yok."
+[ -f "../turkaos-logo.png" ] && cp ../turkaos-logo.png config/includes.chroot/usr/share/icons/turkaos-logo.png
+if [ -f "../grub-bg.png" ]; then
+    cp ../grub-bg.png config/includes.chroot/boot/grub/grub-bg.png
+    echo 'GRUB_BACKGROUND="/boot/grub/grub-bg.png"' >> config/includes.chroot/etc/default/grub
+    echo 'GRUB_TIMEOUT=2' >> config/includes.chroot/etc/default/grub
+fi
+
+# 4. Sudo Yetkisi
+mkdir -p config/includes.chroot/etc/sudoers.d/
+echo "turka ALL=(ALL) NOPASSWD:ALL" > config/includes.chroot/etc/sudoers.d/turka
+
+# 5. Paket Listesi
+cat <<EOF > config/package-lists/custom.list.chroot
+sudo calamares-settings-debian mousepad ristretto lightdm cinnamon linux-image-amd64
+firefox-esr network-manager-gnome firmware-linux firmware-linux-nonfree firmware-misc-nonfree
+firmware-iwlwifi firmware-realtek firmware-atheros firmware-amd-graphics plymouth plymouth-themes
+EOF
+
+# --- İNŞA SÜRECİ ---
+echo "--- TurkaOS İnşa Ediliyor ---"
+lb build
+
+echo "--- İŞLEM BAŞARILI ---"
+
